@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdulmalik Altamimi | Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Abdulmalik Altamimi - Computer Science Graduate specializing in mobile apps, full-stack development, and server management.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <header class="glass-nav">
+        <div class="logo">Abdulmalik<span>.</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home" data-i18n="nav_home">Home</a></li>
+                <li><a href="#about" data-i18n="nav_about">About</a></li>
+                <li><a href="#experience" data-i18n="nav_experience">Experience</a></li>
+                <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav-actions">
+            <button id="lang-toggle" class="btn-lang">Arabic</button>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero section-spacing">
+            <div class="hero-content">
+                <p class="greeting" data-i18n="hero_greeting">Hello, I'm</p>
+                <h1 class="name" data-i18n="hero_name">Abdulmalik Altamimi</h1>
+                <h2 class="role"><span class="typing-text">Full-stack Developer</span><span class="cursor">|</span></h2>
+                <p class="description" data-i18n="hero_description">
+                    Computer Science graduate from King Saud University, specializing in building integrated technical
+                    solutions from mobile applications to server management.
+                </p>
+                <div class="hero-cta">
+                    <a href="#experience" class="btn btn-primary" data-i18n="hero_btn_exp">My Experience</a>
+                    <a href="#projects" class="btn btn-outline" data-i18n="hero_btn_work">View My Work</a>
+                    <a href="assets/resume.pdf" class="btn btn-cv" download data-i18n="hero_btn_cv">Download CV</a>
+                </div>
+            </div>
+            <div class="hero-image glass-card">
+                <img src="assets/hero.png"
+                    alt="رسم توضيحي احترافي يمثل مطور حلول تقنية يعمل على بناء التطبيقات وإدارة البنية التحتية للخوادم"
+                    class="main-hero-img">
+            </div>
+        </section>
+
+        <section id="about" class="about section-spacing">
+            <h2 class="section-title reveal-up hidden-el" data-i18n="about_title">About Me</h2>
+            <div class="about-container">
+                <div class="about-text glass-card reveal-left hidden-el">
+                    <p data-i18n="about_p1">I am a Computer Science student with a passion for building robust
+                        full-stack applications and exploring the depths of IT and networking. My journey involves
+                        creating intuitive solutions that blend clean user interfaces with powerful backend systems.</p>
+                    <p data-i18n="about_p2">Whether it's developing interactive web apps, intelligent mobile
+                        applications, or orchestrating automated deployments via Docker and self-hosting environments, I
+                        thrive on turning complex problems into elegant tech solutions.</p>
+                </div>
+                <div class="skills glass-card reveal-right hidden-el">
+                    <h3 data-i18n="skills_title">My Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item"><i class="fab fa-python"></i> Python</div>
+                        <div class="skill-item"><i class="fas fa-database"></i> SQL</div>
+                        <div class="skill-item"><i class="fab fa-js"></i> JavaScript</div>
+                        <div class="skill-item"><i class="fas fa-mobile-alt"></i> Flutter</div>
+                        <div class="skill-item"><i class="fab fa-docker"></i> Docker</div>
+                        <div class="skill-item"><i class="fab fa-linux"></i> Arch Linux</div>
+                        <div class="skill-item"><i class="fas fa-server"></i> Self-Hosting</div>
+                        <div class="skill-item"><i class="fas fa-network-wired"></i> Networking</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience section-spacing">
+            <h2 class="section-title reveal-up hidden-el" data-i18n="exp_title">Work Experience</h2>
+            <div class="experience-container">
+                <div class="experience-card glass-card reveal-up hidden-el">
+                    <div class="exp-header">
+                        <h3 data-i18n="exp_role">IT Support Intern</h3>
+                        <span class="exp-date" data-i18n="exp_date">July 2025 - January 2026</span>
+                    </div>
+                    <h4 class="exp-company" data-i18n="exp_company">Ministry of Commerce</h4>
+                    <p class="exp-desc" data-i18n="exp_desc">
+                        Provided foundational IT support, automated workflow processes, and assisted in network
+                        troubleshooting. Gained practical experience working with enterprise-level systems and ensuring
+                        operational continuity.
+                    </p>
+                    <div class="tech-stack" data-i18n="exp_tags">
+                        <span>IT Support</span><span>Networking</span><span>Automation</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects section-spacing">
+            <h2 class="section-title reveal-up hidden-el" data-i18n="projects_title">My Projects</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All</button>
+                <button class="filter-btn" data-filter="web" data-i18n="filter_web">Web</button>
+                <button class="filter-btn" data-filter="app" data-i18n="filter_mobile">Mobile</button>
+                <button class="filter-btn" data-filter="sys" data-i18n="filter_sys">Systems</button>
+            </div>
+            <div class="project-grid">
+                <div class="project-card glass-card project-item web reveal-up hidden-el delay-1">
+                    <div class="project-image"><img src="assets/project_nibras.png"
+                            alt="لقطة شاشة لواجهة تطبيق نبراس للمسابقات التي تعرض الأسئلة التفاعلية ونظام النقاط والمزامنة السحابية">
+                    </div>
+                    <div class="project-info">
+                        <h3 data-i18n="proj_nibras_title">Nibras (نبراس)</h3>
+                        <p data-i18n="proj_nibras_mini_desc">Interactive Quiz App built with modern tech for a fun,
+                            seamless challenge with a synced cloud database.</p>
+                        <div class="tech-stack" data-i18n="proj_nibras_tags">
+                            <span>Flutter</span><span>Supabase</span><span>Mobile App</span>
+                        </div>
+                        <a href="javascript:void(0)" class="view-btn" data-project="nibras"><span
+                                data-i18n="view_details">View Details</span> <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card glass-card project-item app reveal-up hidden-el delay-2">
+                    <div class="project-image"><img src="assets/project_asl.png"
+                            alt="لقطة شاشة لواجهة تطبيق التعرف على لغة الإشارة العربية يظهر استخدام كاميرا الهاتف للترجمة الفورية باستخدام الذكاء الاصطناعي">
+                    </div>
+                    <div class="project-info">
+                        <h3 data-i18n="proj_asl_title">ASL Recognition</h3>
+                        <p data-i18n="proj_asl_mini_desc">Intelligent app using AI and Machine Learning to translate
+                            Arabic Sign Language in real-time.</p>
+                        <div class="tech-stack" data-i18n="proj_asl_tags">
+                            <span>Flutter</span><span>TFLite</span><span>AI/ML</span>
+                        </div>
+                        <a href="javascript:void(0)" class="view-btn" data-project="asl"><span
+                                data-i18n="view_details">View Details</span> <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card glass-card project-item web reveal-up hidden-el delay-3">
+                    <div class="project-image"><img src="assets/project_reservations.png"
+                            alt="لقطة شاشة لواجهة منصة حجوزاتي لإدارة حجوزات المطاعم وجدولة المواعيد بكفاءة عالية">
+                    </div>
+                    <div class="project-info">
+                        <h3 data-i18n="proj_res_title">MyReservations</h3>
+                        <p data-i18n="proj_res_mini_desc">Integrated PHP web platform for efficient restaurant booking
+                            management, focusing on DB engineering and process management.</p>
+                        <div class="tech-stack" data-i18n="proj_res_tags">
+                            <span>Full-stack</span><span>Database</span><span>Business Logic</span>
+                        </div>
+                        <a href="javascript:void(0)" class="view-btn" data-project="reservations"><span
+                                data-i18n="view_details">View Details</span> <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card glass-card project-item sys reveal-up hidden-el delay-4">
+                    <div class="project-image"><img src="assets/project_server.png"
+                            alt="لقطة شاشة لوحة تحكم السيرفر المنزلي التي تعرض إدارة الخدمات عبر Docker وأتمتة المهام التقنية">
+                    </div>
+                    <div class="project-info">
+                        <h3 data-i18n="proj_srv_title">Home Server & Automation</h3>
+                        <p data-i18n="proj_srv_mini_desc">Self-hosted infrastructure based on Linux, using Docker for
+                            service management and tools for technical task automation.</p>
+                        <div class="tech-stack" data-i18n="proj_srv_tags">
+                            <span>Docker</span><span>n8n</span><span>Self-hosting</span>
+                        </div>
+                        <a href="javascript:void(0)" class="view-btn" data-project="server"><span
+                                data-i18n="view_details">View Details</span> <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact section-spacing">
+            <h2 class="section-title reveal-up hidden-el" data-i18n="contact_title">Get In Touch</h2>
+            <div class="contact-container glass-card">
+                <div class="contact-info">
+                    <h3 data-i18n="contact_subtitle">Let's Connect</h3>
+                    <p data-i18n="contact_p">I'm always open to discussing new projects, tech collaborations, or
+                        opportunities in Full-stack Dev or IT systems.</p>
+                    <div class="contact-methods">
+                        <div class="method">
+                            <i class="fas fa-envelope"></i>
+                            <span>airzt01@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/abdulmalik-0" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <form id="contactForm" class="contact-form" action="https://formspree.io/f/xreajwdb" method="POST">
+                    <div class="input-group">
+                        <input type="text" id="name" name="name" required placeholder=" ">
+                        <label for="name" data-i18n="contact_name">Your Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" name="email" required placeholder=" ">
+                        <label for="email" data-i18n="contact_email">Your Email</label>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="message" name="message" required placeholder=" " rows="4"></textarea>
+                        <label for="message" data-i18n="contact_message">Your Message</label>
+                    </div>
+                    <div id="form-status" class="form-status"></div>
+                    <button type="submit" class="btn btn-primary" data-i18n="contact_send">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="project-modal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <h2 id="modal-title">Project Title</h2>
+                <p id="modal-desc">Project description goes here.</p>
+                <div id="modal-tags" class="tech-stack"></div>
+                <div class="modal-features">
+                    <h3 data-i18n="modal_features_title">Key Features</h3>
+                    <ul id="modal-features-list"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Abdulmalik Altamimi. <span data-i18n="footer_rights">All rights
+                reserved.</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -31,21 +31,21 @@ document.addEventListener('DOMContentLoaded', () => {
             filter_sys: "Systems",
             view_details: "View Details",
             proj_nibras_title: "Nibras (نبراس)",
-            proj_nibras_mini_desc: "An interactive quiz platform built with Flutter and Supabase, offering a seamless challenge experience with real-time data synchronization.",
-            proj_nibras_desc: "Nibras is a comprehensive Quiz Game platform developed using Flutter for high performance and a smooth user experience. It relies on a Supabase database for real-time data processing, synchronization, and user management. It features diverse questions to challenge users in an interactive environment.",
-            proj_nibras_tags: ["Flutter", "Supabase", "Mobile App"],
+            proj_nibras_mini_desc: "A high-performance interactive quiz platform built with Flutter and Supabase, featuring real-time data synchronization and a scalable cloud backend.",
+            proj_nibras_desc: "Nibras is a sophisticated Quiz Game ecosystem designed for high engagement and performance. Built using Flutter for a native-feel cross-platform experience, it leverages Supabase (PostgreSQL) for handling real-time database operations, user authentication, and activity tracking. The project includes a customized scoring engine and handles complex data relations for competitive gameplay.",
+            proj_nibras_tags: ["Flutter", "Supabase", "PostgreSQL", "BaaS"],
             proj_asl_title: "Arabic Sign Language Recognition",
-            proj_asl_mini_desc: "A smart mobile app leveraging TFLite to translate Arabic Sign Language in real-time via the device camera.",
-            proj_asl_desc: "A project aimed at facilitating communication by converting a pre-built Python AI model into a complete mobile and web application. Built with Flutter, and integrated via TensorFlow Lite to analyze hand movements through the device camera and translate them into text instantly.",
-            proj_asl_tags: ["Flutter", "TFLite", "AI/ML", "Python"],
+            proj_asl_mini_desc: "An AI-powered mobile and web application using TFLite for real-time translation of Arabic Sign Language (ArSL).",
+            proj_asl_desc: "This initiative bridges the gap for the hearing-impaired by deploying pre-trained AI models on edge devices. I transformed a Python-based research model into a production-ready application using Flutter and TensorFlow Lite. It features real-time computer vision processing, analyzing complex hand movements through the camera and translating them into Arabic text with high accuracy and low latency.",
+            proj_asl_tags: ["Flutter", "TensorFlow Lite", "Computer Vision", "AI/ML"],
             proj_res_title: "MyReservations",
-            proj_res_mini_desc: "A comprehensive web platform built with PHP and SQL for efficient restaurant reservation management.",
-            proj_res_desc: "MyReservations is a web-based system dedicated to restaurant booking management. The backend was developed using PHP to handle complex business logic, such as availability checks and peak-time management, ensuring data accuracy via a robust relational database structure.",
-            proj_res_tags: ["PHP", "SQL", "Full-stack"],
+            proj_res_mini_desc: "A robust full-stack web platform for enterprise-level restaurant reservation and seat management.",
+            proj_res_desc: "MyReservations is a comprehensive business solution for hospitality management. Developed with a pure PHP backend and SQL database, it manages complex business logic including seating capacity algorithms, automated reservation confirmations, and conflict-prevention scheduling. The architecture focuses on database integrity and high-performance server-side processing.",
+            proj_res_tags: ["PHP", "MySQL", "Full-Stack Dev", "Database Design"],
             proj_srv_title: "Home Server & Automation",
-            proj_srv_mini_desc: "Self-hosted infrastructure running on Linux, utilizing Docker for service management and tools like n8n for automation.",
-            proj_srv_desc: "An infrastructure project focused on creating and managing a self-hosted environment using Linux. It relies primarily on Docker for building and isolating various service containers, simplifying deployment and maintenance. It also integrates n8n for building pipelines that automate daily tasks with high efficiency.",
-            proj_srv_tags: ["Linux", "Docker", "n8n", "Self-hosting"],
+            proj_srv_mini_desc: "A scalable self-hosted infrastructure running on Arch Linux, utilizing Docker for container orchestration and n8n for workflow automation.",
+            proj_srv_desc: "A deep dive into DevOps and system administration. I architected a private cloud environment using Linux and Docker, hosting various services from development tools to storage solutions. The infrastructure is highly automated via n8n, managing routine security tasks, service monitoring, and periodic cloud-syncing, ensuring maximum uptime and data privacy.",
+            proj_srv_tags: ["Arch Linux", "Docker", "DevOps", "n8n Automation"],
             contact_title: "Get In Touch",
             contact_subtitle: "Let's Connect",
             contact_p: "I'm always open to discussing new projects, tech collaborations, or opportunities in Full-stack Dev or IT systems.",
@@ -92,21 +92,21 @@ document.addEventListener('DOMContentLoaded', () => {
             filter_sys: "أنظمة",
             view_details: "التفاصيل",
             proj_nibras_title: "نبراس (Nibras)",
-            proj_nibras_mini_desc: "منصة مسابقات تفاعلية مبنية باستخدام Flutter و Supabase، تقدم تجربة تحدي ممتعة مع مزامنة لحظية للبيانات.",
-            proj_nibras_desc: "تطبيق 'نبراس' هو منصة مسابقات (Quiz Game) متكاملة تم تطويرها باستخدام إطار عمل Flutter لضمان أداء عالٍ وتجربة مستخدم سلسة. يعتمد التطبيق على قاعدة بيانات Supabase لمعالجة ومزامنة البيانات اللحظية وإدارة المستخدمين. يتميز بأسئلة متنوعة لتحدي المستخدمين في بيئة تفاعلية.",
-            proj_nibras_tags: ["Flutter", "Supabase", "تطبيق موبايل"],
+            proj_nibras_mini_desc: "منصة مسابقات تفاعلية عالية الأداء مبنية باستخدام Flutter و Supabase، تتميز بمزامنة لحظية للبيانات وبنية تحتية سحابية قابلة للتوسع.",
+            proj_nibras_desc: "تطبيق 'نبراس' هو منظومة مسابقات (Quiz Game) متطورة تم تطويرها باستخدام إطار عمل Flutter لضمان تجربة مستخدم سلسة وأداء مشابه للتطبيقات الأصلية (Native). يعتمد التطبيق على قاعدة بيانات Supabase (PostgreSQL) لمعالجة البيانات اللحظية، وإدارة هوية المستخدمين، وتتبع النشاط. يتضمن المشروع محركاً مخصصاً لحساب النقاط يراعي مستويات الصعوبة المختلفة.",
+            proj_nibras_tags: ["Flutter", "Supabase", "PostgreSQL", "BaaS"],
             proj_asl_title: "التعرف على لغة الإشارة العربية",
-            proj_asl_mini_desc: "تطبيق ذكي يعتمد على نماذج تعلم الآلة (TFLite) لترجمة لغة الإشارة العربية في الوقت الفعلي عبر كاميرا الهاتف.",
-            proj_asl_desc: "مشروع يهدف إلى تسهيل التواصل عبر تحويل نموذج ذكاء اصطناعي (مبني مسبقاً بـ Python) إلى تطبيق متكامل يعمل على الهواتف والويب. تم بناء الواجهة باستخدام Flutter، وتم دمج نموذج تعلم الآلة عبر تقنية TensorFlow Lite لتحليل حركات اليد وترجمتها إلى نصوص فوريّة.",
-            proj_asl_tags: ["Flutter", "TFLite", "ذكاء اصطناعي"],
+            proj_asl_mini_desc: "تطبيق ذكي يعتمد على نماذج تعلم الآلة (TFLite) لترجمة لغة الإشارة العربية في الوقت الفعلي عبر تقنيات الرؤية الحاسوبية.",
+            proj_asl_desc: "مشروع يهدف إلى تسهيل التواصل لفئة الصم والبكم عبر تحويل نموذج ذكاء اصطناعي (تم تطويره باستخدام Python) إلى تطبيق عملي يعمل على الهواتف. تم دمج نموذج تعلم الآلة عبر تقنية TensorFlow Lite لمعالجة الصور في الوقت الفعلي، حيث يقوم التطبيق بتحليل حركات اليد المعقدة عبر الكاميرا وترجمتها إلى نصوص عربية ومفردات فورية بدقة وسرعة عالية.",
+            proj_asl_tags: ["Flutter", "TensorFlow Lite", "رؤية حاسوبية", "ذكاء اصطناعي"],
             proj_res_title: "حجوزاتي (MyReservations)",
-            proj_res_mini_desc: "منصة ويب متكاملة مبنية بـ PHP و SQL لإدارة حجوزات المطاعم بكفاءة عالية.",
-            proj_res_desc: "منصة 'MyReservations' هي نظام ويب مخصص لإدارة حجوزات المطاعم. تم تطوير الواجهة الخلفية للنظام باستخدام لغة PHP للتعامل مع العمليات المنطقية المعقدة (Business Logic)، مثل التحقق من توفر الطاولات وإدارة أوقات الذروة.",
-            proj_res_tags: ["PHP", "SQL", "تطوير متكامل"],
+            proj_res_mini_desc: "منصة ويب متكاملة مبنية بـ PHP و SQL مخصصة لإدارة حجوزات المطاعم وتنظيم السعات التشغيلية بكفاءة.",
+            proj_res_desc: "نظام 'MyReservations' هو حل تقني متكامل لإدارة الأعمال في قطاع الضيافة. تم بناء الواجهة الخلفية باستخدام PHP وقواعد بيانات SQL لإدارة عمليات منطقية معقدة، مثل خوارزميات توزيع الطاولات، التأكيدات التلقائية، وجدولة المواعيد المتقدمة التي تمنع تعارض الحجوزات، مع التركيز العالي على سلامة البيانات وسرعة المعالجة.",
+            proj_res_tags: ["PHP", "MySQL", "تطوير شامل", "قواعد بيانات"],
             proj_srv_title: "السيرفر المنزلي والأتمتة",
-            proj_srv_mini_desc: "بنية تحتية ذاتية الاستضافة تعتمد على نظام Linux، تستخدم Docker و n8n لإدارة الخدمات وأتمتة المهام.",
-            proj_srv_desc: "مشروع بنية تحتية يركز على إنشاء وإدارة خادم منزلي (Self-hosted Environment) باستخدام بيئة تشغيل Linux. يعتمد المشروع بشكل أساسي على تقنية Docker لبناء وعزل حاويات الخدمات المختلفة، مع دمج أدوات مثل n8n لأتمتة المهام اليومية.",
-            proj_srv_tags: ["Linux", "Docker", "n8n", "استضافة ذاتية"],
+            proj_srv_mini_desc: "بنية تحتية سحابية خاصة تعتمد على نظام Arch Linux، تستخدم Docker لإدارة الحاويات وأداة n8n لأتمتة مسارات العمل التقنية.",
+            proj_srv_desc: "مشروع متقدم في مجال الـ DevOps وإدارة الأنظمة. قمت بناء بيئة سحابية خاصة باستخدام Linux و Docker، استضيف من خلالها مجموعة من الخدمات التقنية والأدوات البرمجية الخاصة. البنية التحتية مؤتمتة بالكامل عبر n8n، لإدارة المهام الأمنية الدورية، مراقبة الخدمات، والمزامنة السحابية التلقائية، مما يضمن استمرارية التشغيل وخصوصية البيانات.",
+            proj_srv_tags: ["Arch Linux", "Docker", "DevOps", "أتمتة التقنيات"],
             contact_title: "تواصل معي",
             contact_subtitle: "لنكن على اتصال",
             contact_p: "أنا منفتح دائماً لمناقشة المشاريع الجديدة، أو التعاون التقني، أو الفرص في تطوير البرمجيات أو أنظمة تقنية المعلومات.",
@@ -130,26 +130,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectDetails = {
         nibras: {
             features: {
-                en: ["Cross-platform Flutter app", "BaaS Integration (Supabase)", "Interactive Scoring System", "Synced user profiles"],
-                ar: ["واجهة مستخدم تدعم أنظمة تشغيل متعددة (Cross-platform)", "ربط متقدم مع واجهة خلفية سحابية (Supabase)", "نظام تفاعلي لعرض الأسئلة وحساب النقاط", "مزامنة لحظية للبيانات"]
+                en: ["Native cross-platform execution (Flutter)", "Cloud-native BaaS (Supabase/PostgreSQL)", "Dynamic difficulty weight system", "Real-time global leaderboard & state sync", "Robust RLS (Row Level Security) policies"],
+                ar: ["تنفيذ أصيل عبر المنصات (Flutter)", "اعتماد كامل على الخدمات السحابية (Supabase/PostgreSQL)", "نظام موازنة ديناميكي لمستويات الصعوبة", "لوحة صدارة عالمية ومزامنة لحظية للحالات", "سياسات أمنية متقدمة لحماية البيانات (RLS)"]
             }
         },
         asl: {
             features: {
-                en: ["Real-time Vision Processing", "Embedded TFLite Models", "Accessibility-first UI design", "Near-instant translation"],
-                ar: ["معالجة الصور في الوقت الفعلي (Real-time Vision)", "دمج نماذج تعلم الآلة (TFLite) في الموبايل", "تصميم واجهة يركز على سهولة الوصول (Accessibility)", "ترجمة فورية ومباشرة"]
+                en: ["High-accuracy Hand-pose detection", "Edge computing using TFLite (No server needed)", "Real-time vision processing (high FPS)", "Intuitive interface for disability assistance", "Supports multiple gestures and word patterns"],
+                ar: ["كشف دقيق لوضعيات اليد وحركاتها", "معالجة طرفية (TFLite) تعمل دون الحاجة للخوادم", "معالجة رؤية حاسوبية فورية بمعدل إطارات عالٍ", "واجهة بديهية مصممة لمساعدة المعاقين سمعياً", "يدعم أنماط متعددة للإيماءات والمفردات"]
             }
         },
         reservations: {
             features: {
-                en: ["Solid PHP Backend processing", "Advanced Relational DB (SQL)", "Precise Scheduling Engine", "Conflict Prevention logic"],
-                ar: ["واجهة خلفية صلبة لمعالجة الطلبات (PHP)", "إدارة متقدمة لقواعد البيانات العلائقية (SQL)", "نظام جدولة دقيق لإدارة السعة", "منع تعارض الحجوزات"]
+                en: ["Relational schema design for high integrity", "Conflict-prevention scheduling algorithms", "Full-scale administrative dashboard", "Email/SMS automated notification support", "Performance-optimized SQL queries"],
+                ar: ["تصميم قواعد بيانات علائقية بسلامة عالية", "خوارزميات جدولة متقدمة تمنع التداخل", "لوحة تحكم كاملة للإدارة والتقارير", "دعم الإشعارات التلقائية (SMS/Email)", "استعلامات SQL معالجة لضمان سرعة الاستجابة"]
             }
         },
         server: {
             features: {
-                en: ["Secure Self-hosting environment", "Container management via Docker", "Automated Workflow Pipelines (n8n)", "Centralized Service control"],
-                ar: ["استضافة ذاتية آمنة ومستقلة (Self-hosting)", "إدارة الحاويات ونشر الخدمات (Docker)", "تصميم مسارات عمل مؤتمتة (n8n)", "تقليل التدخل اليدوي عبر المحاكاة"]
+                en: ["Microservices orchestration with Docker", "Automated backup & sync pipelines (n8n)", "Advanced Linux networking & firewall config", "System health monitoring & status alerts", "Scalable architecture for adding new services"],
+                ar: ["إدارة بنية الميكروسيرفس عبر تقنية Docker", "مسارات نسخ احتياطي ومزامنة تلقائية (n8n)", "إعدادات شبكات لينكس وجدران حماية متقدمة", "مراقبة دورية لصحة النظام وتنبيهات الحالة", "بنية قابلة للتوسع لإضافة خدمات جديدة بسهولة"]
             }
         }
     };

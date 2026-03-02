@@ -31,21 +31,21 @@ document.addEventListener('DOMContentLoaded', () => {
             filter_sys: "Systems",
             view_details: "View Details",
             proj_nibras_title: "Nibras (نبراس)",
-            proj_nibras_mini_desc: "A high-performance interactive quiz platform built with Flutter and Supabase, featuring real-time data synchronization and a scalable cloud backend.",
-            proj_nibras_desc: "Nibras is a sophisticated Quiz Game ecosystem designed for high engagement and performance. Built using Flutter for a native-feel cross-platform experience, it leverages Supabase (PostgreSQL) for handling real-time database operations, user authentication, and activity tracking. The project includes a customized scoring engine and handles complex data relations for competitive gameplay.",
-            proj_nibras_tags: ["Flutter", "Supabase", "PostgreSQL", "BaaS"],
+            proj_nibras_mini_desc: "A full-featured interactive quiz platform integrated with 'Moyasar' for secure financial transactions and Supabase for real-time data sync.",
+            proj_nibras_desc: "A full-featured interactive quiz platform. The frontend is built with modern web technologies, integrated with a Supabase cloud database featuring real-time synchronization and robust Row Level Security (RLS) policies. A key highlight is the seamless integration with the 'Moyasar' payment gateway for secure transactions, deployed and managed via Vercel and CranL.",
+            proj_nibras_tags: ["Flutter", "Supabase", "Moyasar API", "FinTech"],
             proj_asl_title: "Arabic Sign Language Recognition",
-            proj_asl_mini_desc: "An AI-powered mobile and web application using TFLite for real-time translation of Arabic Sign Language (ArSL).",
-            proj_asl_desc: "This initiative bridges the gap for the hearing-impaired by deploying pre-trained AI models on edge devices. I transformed a Python-based research model into a production-ready application using Flutter and TensorFlow Lite. It features real-time computer vision processing, analyzing complex hand movements through the camera and translating them into Arabic text with high accuracy and low latency.",
-            proj_asl_tags: ["Flutter", "TensorFlow Lite", "Computer Vision", "AI/ML"],
+            proj_asl_mini_desc: "Smart mobile app using TFLite for real-time hand gesture analysis and instant translation without external servers.",
+            proj_asl_desc: "A smart mobile app leveraging edge computing for real-time computer vision processing. Machine learning models (TFLite) are integrated directly within the Flutter environment to analyze hand gestures via the device camera, providing instant translation without relying on external servers for speed and privacy.",
+            proj_asl_tags: ["Flutter", "TensorFlow Lite", "Edge Computing", "AI/ML"],
             proj_res_title: "MyReservations",
             proj_res_mini_desc: "A robust full-stack web platform for enterprise-level restaurant reservation and seat management.",
             proj_res_desc: "MyReservations is a comprehensive business solution for hospitality management. Developed with a pure PHP backend and SQL database, it manages complex business logic including seating capacity algorithms, automated reservation confirmations, and conflict-prevention scheduling. The architecture focuses on database integrity and high-performance server-side processing.",
             proj_res_tags: ["PHP", "MySQL", "Full-Stack Dev", "Database Design"],
             proj_srv_title: "Home Server & Automation",
-            proj_srv_mini_desc: "A scalable self-hosted infrastructure running on Arch Linux, utilizing Docker for container orchestration and n8n for workflow automation.",
-            proj_srv_desc: "A deep dive into DevOps and system administration. I architected a private cloud environment using Linux and Docker, hosting various services from development tools to storage solutions. The infrastructure is highly automated via n8n, managing routine security tasks, service monitoring, and periodic cloud-syncing, ensuring maximum uptime and data privacy.",
-            proj_srv_tags: ["Arch Linux", "Docker", "DevOps", "n8n Automation"],
+            proj_srv_mini_desc: "Self-hosted infrastructure on Arch Linux featuring Docker containers, local AI models (Ollama), and n8n automation.",
+            proj_srv_desc: "A comprehensive self-hosted infrastructure running on Arch Linux. The environment utilizes Docker for efficient container orchestration and management. It features local AI model deployments (like Ollama and Open WebUI) for privacy, alongside fully automated workflows built with n8n to minimize manual intervention.",
+            proj_srv_tags: ["Arch Linux", "Docker", "Ollama", "n8n Automation"],
             contact_title: "Get In Touch",
             contact_subtitle: "Let's Connect",
             contact_p: "I'm always open to discussing new projects, tech collaborations, or opportunities in Full-stack Dev or IT systems.",
@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             contact_error: "Oops! There was a problem submitting your form. Please try again.",
             footer_rights: "All rights reserved.",
             modal_features_title: "Key Features",
+            live_demo: "Live Demo",
             typing_words: ["Computer Science Graduate", "IT Infrastructure & Servers", "Tech Solutions Developer"],
             contact_placeholder_name: "Abdulmalik Altamimi",
             contact_placeholder_email: "name@example.com",
@@ -92,21 +93,21 @@ document.addEventListener('DOMContentLoaded', () => {
             filter_sys: "أنظمة",
             view_details: "التفاصيل",
             proj_nibras_title: "نبراس (Nibras)",
-            proj_nibras_mini_desc: "منصة مسابقات تفاعلية عالية الأداء مبنية باستخدام Flutter و Supabase، تتميز بمزامنة لحظية للبيانات وبنية تحتية سحابية قابلة للتوسع.",
-            proj_nibras_desc: "تطبيق 'نبراس' هو منظومة مسابقات (Quiz Game) متطورة تم تطويرها باستخدام إطار عمل Flutter لضمان تجربة مستخدم سلسة وأداء مشابه للتطبيقات الأصلية (Native). يعتمد التطبيق على قاعدة بيانات Supabase (PostgreSQL) لمعالجة البيانات اللحظية، وإدارة هوية المستخدمين، وتتبع النشاط. يتضمن المشروع محركاً مخصصاً لحساب النقاط يراعي مستويات الصعوبة المختلفة.",
-            proj_nibras_tags: ["Flutter", "Supabase", "PostgreSQL", "BaaS"],
+            proj_nibras_mini_desc: "منصة مسابقات تفاعلية متكاملة تضم بوابة الدفع 'ميسر' (Moyasar) ومزامنة سحابية لحظية عبر Supabase.",
+            proj_nibras_desc: "منصة مسابقات تفاعلية متكاملة. تم تطوير الواجهة باستخدام أحدث تقنيات الويب، مع ربطها بقاعدة بيانات سحابية (Supabase) تدعم المزامنة اللحظية وتطبيق سياسات أمان متقدمة (RLS). أبرز ما يميز المشروع هو الدمج المباشر مع بوابة الدفع 'ميسر' (Moyasar) لمعالجة العمليات المالية بأمان، بالإضافة إلى نشر المنصة وإدارتها عبر بيئات سحابية مثل Vercel و CranL.",
+            proj_nibras_tags: ["Flutter", "Supabase", "بوابة ميسر", "FinTech"],
             proj_asl_title: "التعرف على لغة الإشارة العربية",
-            proj_asl_mini_desc: "تطبيق ذكي يعتمد على نماذج تعلم الآلة (TFLite) لترجمة لغة الإشارة العربية في الوقت الفعلي عبر تقنيات الرؤية الحاسوبية.",
-            proj_asl_desc: "مشروع يهدف إلى تسهيل التواصل لفئة الصم والبكم عبر تحويل نموذج ذكاء اصطناعي (تم تطويره باستخدام Python) إلى تطبيق عملي يعمل على الهواتف. تم دمج نموذج تعلم الآلة عبر تقنية TensorFlow Lite لمعالجة الصور في الوقت الفعلي، حيث يقوم التطبيق بتحليل حركات اليد المعقدة عبر الكاميرا وترجمتها إلى نصوص عربية ومفردات فورية بدقة وسرعة عالية.",
+            proj_asl_mini_desc: "تطبيق ذكي يعتمد على نماذج TFLite للترجمة الفورية للغة الإشارة ومعالجة الرؤية الحاسوبية محلياً.",
+            proj_asl_desc: "تطبيق ذكي يعتمد على حوسبة الحافة (Edge Computing) لمعالجة الرؤية الحاسوبية في الوقت الفعلي. تم دمج نماذج تعلم الآلة (TFLite) مباشرة داخل بيئة Flutter لتحليل حركات اليد عبر كاميرا الهاتف وترجمتها فورياً دون الحاجة للاتصال بخوادم خارجية، مما يضمن سرعة الأداء والخصوصية.",
             proj_asl_tags: ["Flutter", "TensorFlow Lite", "رؤية حاسوبية", "ذكاء اصطناعي"],
             proj_res_title: "حجوزاتي (MyReservations)",
             proj_res_mini_desc: "منصة ويب متكاملة مبنية بـ PHP و SQL مخصصة لإدارة حجوزات المطاعم وتنظيم السعات التشغيلية بكفاءة.",
             proj_res_desc: "نظام 'MyReservations' هو حل تقني متكامل لإدارة الأعمال في قطاع الضيافة. تم بناء الواجهة الخلفية باستخدام PHP وقواعد بيانات SQL لإدارة عمليات منطقية معقدة، مثل خوارزميات توزيع الطاولات، التأكيدات التلقائية، وجدولة المواعيد المتقدمة التي تمنع تعارض الحجوزات، مع التركيز العالي على سلامة البيانات وسرعة المعالجة.",
             proj_res_tags: ["PHP", "MySQL", "تطوير شامل", "قواعد بيانات"],
             proj_srv_title: "السيرفر المنزلي والأتمتة",
-            proj_srv_mini_desc: "بنية تحتية سحابية خاصة تعتمد على نظام Arch Linux، تستخدم Docker لإدارة الحاويات وأداة n8n لأتمتة مسارات العمل التقنية.",
-            proj_srv_desc: "مشروع متقدم في مجال الـ DevOps وإدارة الأنظمة. قمت بناء بيئة سحابية خاصة باستخدام Linux و Docker، استضيف من خلالها مجموعة من الخدمات التقنية والأدوات البرمجية الخاصة. البنية التحتية مؤتمتة بالكامل عبر n8n، لإدارة المهام الأمنية الدورية، مراقبة الخدمات، والمزامنة السحابية التلقائية، مما يضمن استمرارية التشغيل وخصوصية البيانات.",
-            proj_srv_tags: ["Arch Linux", "Docker", "DevOps", "أتمتة التقنيات"],
+            proj_srv_mini_desc: "بنية تحتية ذاتية الاستضافة تعتمد على نظام Arch Linux مع نماذج ذكاء اصطناعي محلية (Ollama) وأتمتة n8n.",
+            proj_srv_desc: "بنية تحتية متكاملة ذاتية الاستضافة مبنية على نظام Arch Linux. تم تصميم البيئة باستخدام تقنية Docker لعزل وإدارة الحاويات بكفاءة. يتضمن المشروع نشر نماذج ذكاء اصطناعي محلية (مثل Ollama و Open WebUI) لضمان الخصوصية، بالإضافة إلى بناء مسارات عمل مؤتمتة بالكامل باستخدام أداة n8n لتقليل التدخل اليدوي.",
+            proj_srv_tags: ["Arch Linux", "Docker", "Ollama AI", "أتمتة"],
             contact_title: "تواصل معي",
             contact_subtitle: "لنكن على اتصال",
             contact_p: "أنا منفتح دائماً لمناقشة المشاريع الجديدة، أو التعاون التقني، أو الفرص في تطوير البرمجيات أو أنظمة تقنية المعلومات.",
@@ -119,34 +120,35 @@ document.addEventListener('DOMContentLoaded', () => {
             contact_error: "حدث خطأ أثناء إرسال الرسالة، يرجى المحاولة لاحقاً.",
             footer_rights: "جميع الحقوق محفوظة.",
             modal_features_title: "المميزات الرئيسية",
-            typing_words: ["خريج علوم حاسب", "بنية تحتية وخوادم", "مطور حلول تقنية"],
-            contact_placeholder_name: "عبدالملك التميمي",
-            contact_placeholder_email: "name@example.com",
-            contact_placeholder_message: "كيف يمكنني مساعدتك؟"
+            live_demo: "رابط حي",
         }
     };
 
     // Project Detail Info for Modal
     const projectDetails = {
         nibras: {
+            liveLink: "https://nibrasweb-fcv4ql.cranl.net",
             features: {
-                en: ["Native cross-platform execution (Flutter)", "Cloud-native BaaS (Supabase/PostgreSQL)", "Dynamic difficulty weight system", "Real-time global leaderboard & state sync", "Robust RLS (Row Level Security) policies"],
-                ar: ["تنفيذ أصيل عبر المنصات (Flutter)", "اعتماد كامل على الخدمات السحابية (Supabase/PostgreSQL)", "نظام موازنة ديناميكي لمستويات الصعوبة", "لوحة صدارة عالمية ومزامنة لحظية للحالات", "سياسات أمنية متقدمة لحماية البيانات (RLS)"]
+                en: ["Native cross-platform execution (Flutter)", "Moyasar Payment Gateway Integration", "Cloud-native BaaS (Supabase/PostgreSQL)", "Dynamic difficulty weight system", "Real-time global leaderboard & state sync", "Robust RLS (Row Level Security) policies"],
+                ar: ["تنفيذ أصيل عبر المنصات (Flutter)", "دمج بوابة الدفع 'ميسر' (Moyasar)", "اعتماد كامل على الخدمات السحابية (Supabase/PostgreSQL)", "نظام موازنة ديناميكي لمستويات الصعوبة", "لوحة صدارة عالمية ومزامنة لحظية للحالات", "سياسات أمنية متقدمة لحماية البيانات (RLS)"]
             }
         },
         asl: {
+            liveLink: "https://arsl-translator-6vdc84.cranl.net",
             features: {
                 en: ["High-accuracy Hand-pose detection", "Edge computing using TFLite (No server needed)", "Real-time vision processing (high FPS)", "Intuitive interface for disability assistance", "Supports multiple gestures and word patterns"],
                 ar: ["كشف دقيق لوضعيات اليد وحركاتها", "معالجة طرفية (TFLite) تعمل دون الحاجة للخوادم", "معالجة رؤية حاسوبية فورية بمعدل إطارات عالٍ", "واجهة بديهية مصممة لمساعدة المعاقين سمعياً", "يدعم أنماط متعددة للإيماءات والمفردات"]
             }
         },
         reservations: {
+            liveLink: "https://myreservations-gtl7ob.cranl.net",
             features: {
                 en: ["Relational schema design for high integrity", "Conflict-prevention scheduling algorithms", "Full-scale administrative dashboard", "Email/SMS automated notification support", "Performance-optimized SQL queries"],
                 ar: ["تصميم قواعد بيانات علائقية بسلامة عالية", "خوارزميات جدولة متقدمة تمنع التداخل", "لوحة تحكم كاملة للإدارة والتقارير", "دعم الإشعارات التلقائية (SMS/Email)", "استعلامات SQL معالجة لضمان سرعة الاستجابة"]
             }
         },
         server: {
+            liveLink: "#",
             features: {
                 en: ["Microservices orchestration with Docker", "Automated backup & sync pipelines (n8n)", "Advanced Linux networking & firewall config", "System health monitoring & status alerts", "Scalable architecture for adding new services"],
                 ar: ["إدارة بنية الميكروسيرفس عبر تقنية Docker", "مسارات نسخ احتياطي ومزامنة تلقائية (n8n)", "إعدادات شبكات لينكس وجدران حماية متقدمة", "مراقبة دورية لصحة النظام وتنبيهات الحالة", "بنية قابلة للتوسع لإضافة خدمات جديدة بسهولة"]
@@ -173,6 +175,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     element.textContent = langData[key];
                 }
             }
+        });
+
+        // Update Live Demo buttons text
+        document.querySelectorAll('.live-demo-btn, .modal-live-btn').forEach(btn => {
+            btn.innerHTML = `<i class="fas fa-external-link-alt"></i> ${langData.live_demo}`;
         });
 
         // Update form placeholders specifically
@@ -233,6 +240,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 modalFeaturesList.innerHTML = details.features[currentLang].map(f => `<li>${f}</li>`).join('');
             } else {
                 modalFeaturesList.innerHTML = '';
+            }
+
+            // Update Live Demo Link in Modal
+            const modalLiveBtn = document.getElementById('modal-live-btn');
+            if (modalLiveBtn) {
+                if (details.liveLink && details.liveLink !== "#") {
+                    modalLiveBtn.href = details.liveLink;
+                    modalLiveBtn.style.display = 'inline-flex';
+                } else {
+                    modalLiveBtn.style.display = 'none';
+                }
             }
 
             modal.style.display = 'block';

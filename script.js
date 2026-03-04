@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Project Detail Info for Modal
     const projectDetails = {
         nibras: {
-            liveLink: "https://nibrasweb-fcv4ql.cranl.net",
+            liveLink: "https://nibras.fun",
             features: {
                 en: ["Native cross-platform execution (Flutter)", "Moyasar Payment Gateway Integration", "Cloud-native BaaS (Supabase/PostgreSQL)", "Dynamic difficulty weight system", "Real-time global leaderboard & state sync", "Robust RLS (Row Level Security) policies"],
                 ar: ["تنفيذ أصيل عبر المنصات (Flutter)", "دمج بوابة الدفع 'ميسر' (Moyasar)", "اعتماد كامل على الخدمات السحابية (Supabase/PostgreSQL)", "نظام موازنة ديناميكي لمستويات الصعوبة", "لوحة صدارة عالمية ومزامنة لحظية للحالات", "سياسات أمنية متقدمة لحماية البيانات (RLS)"]
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         },
         reservations: {
-            liveLink: "https://myreservations-gtl7ob.cranl.net",
+            liveLink: "https://myreservationsnew-jifdvu.cranl.net/",
             features: {
                 en: ["Relational schema design for high integrity", "Conflict-prevention scheduling algorithms", "Full-scale administrative dashboard", "Email/SMS automated notification support", "Performance-optimized SQL queries"],
                 ar: ["تصميم قواعد بيانات علائقية بسلامة عالية", "خوارزميات جدولة متقدمة تمنع التداخل", "لوحة تحكم كاملة للإدارة والتقارير", "دعم الإشعارات التلقائية (SMS/Email)", "استعلامات SQL معالجة لضمان سرعة الاستجابة"]

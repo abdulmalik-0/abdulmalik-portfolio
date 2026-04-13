@@ -134,14 +134,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         },
         asl: {
-            liveLink: "https://arsl-translator-6vdc84.cranl.net",
+            liveLink: "https://ARSL.altamimi.tech",
             features: {
                 en: ["High-accuracy Hand-pose detection", "Edge computing using TFLite (No server needed)", "Real-time vision processing (high FPS)", "Intuitive interface for disability assistance", "Supports multiple gestures and word patterns"],
                 ar: ["كشف دقيق لوضعيات اليد وحركاتها", "معالجة طرفية (TFLite) تعمل دون الحاجة للخوادم", "معالجة رؤية حاسوبية فورية بمعدل إطارات عالٍ", "واجهة بديهية مصممة لمساعدة المعاقين سمعياً", "يدعم أنماط متعددة للإيماءات والمفردات"]
             }
         },
         reservations: {
-            liveLink: "https://myreservationsnew-jifdvu.cranl.net/",
+            liveLink: "https://MyReservations.altamimi.tech",
             features: {
                 en: ["Relational schema design for high integrity", "Conflict-prevention scheduling algorithms", "Full-scale administrative dashboard", "Email/SMS automated notification support", "Performance-optimized SQL queries"],
                 ar: ["تصميم قواعد بيانات علائقية بسلامة عالية", "خوارزميات جدولة متقدمة تمنع التداخل", "لوحة تحكم كاملة للإدارة والتقارير", "دعم الإشعارات التلقائية (SMS/Email)", "استعلامات SQL معالجة لضمان سرعة الاستجابة"]

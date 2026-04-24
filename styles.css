@@ -956,6 +956,16 @@ footer {
         justify-content: center;
     }
 
+    .hero-image {
+        max-width: 260px;
+        height: 260px;
+        margin: 0 auto;
+    }
+
+    .cv-buttons {
+        justify-content: center;
+    }
+
     .about-container {
         flex-direction: column;
     }

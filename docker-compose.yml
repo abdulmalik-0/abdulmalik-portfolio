@@ -1,0 +1,14 @@
+services:
+  portfolio_app:
+    image: abdulmalik-portfolio
+    container_name: portfolio_app
+    build: .
+    ports:
+      - "8080:80"
+    restart: always
+    networks:
+      - lab_network
+
+networks:
+  lab_network:
+    external: true

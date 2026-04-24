@@ -371,6 +371,12 @@ h2.section-title::after {
     flex-wrap: wrap;
 }
 
+.cv-buttons {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+}
+
 .btn-cv {
     background: var(--secondary-color);
     color: white;
@@ -387,7 +393,6 @@ h2.section-title::after {
     background: #4f46e5;
     color: white;
     box-shadow: 0 4px 15px rgba(79, 70, 229, 0.5);
-    margin-left: auto;
 }
 
 .btn-download:hover {

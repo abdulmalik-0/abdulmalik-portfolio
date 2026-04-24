@@ -13,17 +13,18 @@ document.addEventListener('DOMContentLoaded', () => {
             hero_description: "Computer Science graduate specializing in IT infrastructure and network environments. I combine a deep understanding of servers with the ability to develop integrated tech solutions and smart applications.",
             hero_btn_exp: "My Experience",
             hero_btn_work: "View My Work",
-            hero_btn_cv: "Download CV",
+            hero_btn_cv: "View CV",
+            hero_btn_cv_dl: "Download CV",
             about_title: "About Me",
-            about_p1: "I am a Computer Science graduate with a strong passion for IT networks and infrastructure. My technical journey is driven by a love for exploring Linux environments, self-hosting setups, and orchestrating efficient deployments using Docker.",
-            about_p2: "Beyond servers, I enjoy building practical software solutions. Whether it's developing interactive mobile apps with Flutter or building web systems with robust databases, I thrive on bridging the gap between solid backend systems and seamless user experiences.",
+            about_p1: "I am a Computer Science graduate from King Saud University with hands-on experience in Systems Administration and IT Support at the Ministry of Commerce. I have a proven track record in managing Active Directory, GPOs, and LAPS in enterprise environments.",
+            about_p2: "Beyond infrastructure, I am a skilled Full-Stack Developer with expertise in AI-driven applications and real-time systems using Python and Flutter. Passionate about optimizing network security and building high-performance technical solutions.",
             skills_title: "My Skills",
             exp_title: "Work Experience",
-            exp_role: "IT Support Intern",
+            exp_role: "IT Support & Systems Administration Intern",
             exp_company: "Ministry of Commerce",
-            exp_date: "July 2025 - January 2026",
-            exp_desc: "Provided essential IT support and network troubleshooting. Worked on automating workflow processes to ensure operational continuity, gaining valuable hands-on experience with enterprise-level technical systems.",
-            exp_tags: ["IT Support", "Networking", "Automation"],
+            exp_date: "June 2025 - January 2026",
+            exp_desc: "Managed user accounts and organizational units (OUs) within Active Directory for enterprise access control. Administered user permissions and endpoint security using LAPS. Executed Windows 11 enterprise migration and provided comprehensive technical support in a high-stakes government environment.",
+            exp_tags: ["Active Directory", "LAPS & GPO", "Windows 11", "IT Support"],
             projects_title: "My Projects",
             filter_all: "All",
             filter_web: "Web",
@@ -31,17 +32,17 @@ document.addEventListener('DOMContentLoaded', () => {
             filter_sys: "Systems",
             view_details: "View Details",
             proj_nibras_title: "Nibras (نبراس)",
-            proj_nibras_mini_desc: "A full-featured interactive quiz platform integrated with 'Moyasar' for secure financial transactions and Supabase for real-time data sync.",
-            proj_nibras_desc: "A full-featured interactive quiz platform. The frontend is built with modern web technologies, integrated with a Supabase cloud database featuring real-time synchronization and robust Row Level Security (RLS) policies. A key highlight is the seamless integration with the 'Moyasar' payment gateway for secure transactions, deployed and managed via Vercel and CranL.",
-            proj_nibras_tags: ["Flutter", "Supabase", "Moyasar API", "FinTech"],
+            proj_nibras_mini_desc: "A full-featured interactive quiz platform integrated with 'My Fatoorah' for secure financial transactions and Supabase for real-time data sync.",
+            proj_nibras_desc: "A full-featured interactive quiz platform. The frontend is built with modern web technologies, integrated with a Supabase cloud database featuring real-time synchronization and robust Row Level Security (RLS) policies. A key highlight is the seamless integration with the 'My Fatoorah' payment gateway for secure transactions, deployed and managed via Vercel.",
+            proj_nibras_tags: ["Flutter", "Supabase", "My Fatoorah API", "FinTech"],
             proj_asl_title: "Arabic Sign Language Recognition",
             proj_asl_mini_desc: "Smart mobile app using TFLite for real-time hand gesture analysis and instant translation without external servers.",
-            proj_asl_desc: "A smart mobile app leveraging edge computing for real-time computer vision processing. Machine learning models (TFLite) are integrated directly within the Flutter environment to analyze hand gestures via the device camera, providing instant translation without relying on external servers for speed and privacy.",
-            proj_asl_tags: ["Flutter", "TensorFlow Lite", "Edge Computing", "AI/ML"],
+            proj_asl_desc: "A smart mobile app leveraging edge computing for real-time computer vision processing. Machine learning models (TFLite) are integrated directly within the Flutter environment to analyze hand gestures via the device camera, providing instant translation without relying on external servers for speed and privacy. The app is self-hosted on a personal Linux server and exposed securely via Cloudflare.",
+            proj_asl_tags: ["Flutter", "TensorFlow Lite", "Edge Computing", "AI/ML", "Cloudflare"],
             proj_res_title: "MyReservations",
             proj_res_mini_desc: "A robust full-stack web platform for enterprise-level restaurant reservation and seat management.",
-            proj_res_desc: "MyReservations is a comprehensive business solution for hospitality management. Developed with a pure PHP backend and SQL database, it manages complex business logic including seating capacity algorithms, automated reservation confirmations, and conflict-prevention scheduling. The architecture focuses on database integrity and high-performance server-side processing.",
-            proj_res_tags: ["PHP", "MySQL", "Full-Stack Dev", "Database Design"],
+            proj_res_desc: "MyReservations is a comprehensive business solution for hospitality management. Developed with a pure PHP backend and SQL database, it manages complex business logic including seating capacity algorithms, automated reservation confirmations, and conflict-prevention scheduling. The architecture focuses on database integrity and high-performance server-side processing. The platform is self-hosted on a personal Linux server and secured via Cloudflare.",
+            proj_res_tags: ["PHP", "MySQL", "Full-Stack Dev", "Database Design", "Cloudflare"],
             proj_srv_title: "Home Server & Automation",
             proj_srv_mini_desc: "Self-hosted infrastructure on Arch Linux featuring Docker containers, local AI models (Ollama), and n8n automation.",
             proj_srv_desc: "A comprehensive self-hosted infrastructure running on Arch Linux. The environment utilizes Docker for efficient container orchestration and management. It features local AI model deployments (like Ollama and Open WebUI) for privacy, alongside fully automated workflows built with n8n to minimize manual intervention.",
@@ -75,17 +76,18 @@ document.addEventListener('DOMContentLoaded', () => {
             hero_description: "خريج علوم حاسب متخصص في البنية التحتية التقنية وبيئات الشبكات. أجمع بين الفهم العميق للخوادم والقدرة على تطوير حلول تقنية وتطبيقات ذكية متكاملة.",
             hero_btn_exp: "خبراتي",
             hero_btn_work: "أعمالي",
-            hero_btn_cv: "تحميل السيرة الذاتية",
+            hero_btn_cv: "عرض السيرة الذاتية",
+            hero_btn_cv_dl: "تحميل السيرة",
             about_title: "من أنا",
-            about_p1: "أنا خريج علوم حاسب بشغف كبير تجاه شبكات الحاسب والبنية التحتية التقنية. رحلتي التقنية مبنية على حبي لاستكشاف أنظمة اللينكس، بيئات الاستضافة الذاتية (Self-hosting)، وإدارة ونشر الخدمات بكفاءة عالية عبر حاويات Docker.",
-            about_p2: "إلى جانب إدارة الخوادم، أستمتع ببناء حلول برمجية عملية. سواء كان ذلك بتطوير تطبيقات تفاعلية باستخدام Flutter، أو بناء أنظمة ويب تدعم قواعد بيانات قوية، أجد متعتي في الربط بين الأنظمة الخلفية الصلبة وتجارب المستخدم السلسة.",
+            about_p1: "أنا خريج علوم حاسب من جامعة الملك سعود، لديّ خبرة عملية في إدارة الأنظمة والدعم الفني في وزارة التجارة. أمتلك سجلاً حافلاً في إدارة Active Directory وسياسات GPO وبروتوكول LAPS في البيئات المؤسسية.",
+            about_p2: "إلى جانب البنية التحتية، أنا مطور Full-Stack متمكن متخصص في تطبيقات الذكاء الاصطناعي والأنظمة اللحظية باستخدام Python و Flutter. شغوف بتعزيز أمن الشبكات وبناء حلول تقنية عالية الأداء.",
             skills_title: "مهاراتي",
             exp_title: "الخبرة العملية",
-            exp_role: "متدرب دعم فني",
+            exp_role: "متدرب دعم فني وإدارة أنظمة",
             exp_company: "وزارة التجارة",
-            exp_date: "١ يوليو ٢٠٢٥ - ١ يناير ٢٠٢٦",
-            exp_desc: "قدمت الدعم الفني الأساسي وساهمت في استكشاف أخطاء الشبكات وإصلاحها. عملت على أتمتة بعض إجراءات سير العمل لضمان استمرارية التشغيل، مما أكسبني خبرة عملية قيمة في التعامل مع الأنظمة التقنية وبيئات العمل المؤسسية.",
-            exp_tags: ["دعم فني", "شبكات", "أتمتة"],
+            exp_date: "يونيو ٢٠٢٥ - يناير ٢٠٢٦",
+            exp_desc: "إدارة حسابات المستخدمين والوحدات التنظيمية (OUs) داخل Active Directory للتحكم في صلاحيات الوصول المؤسسي. إدارة أذونات المستخدمين وتأمين نقاط النهاية باستخدام LAPS. تنفيذ ترقية Windows 11 المؤسسي وتقديم دعم تقني شامل في بيئة حكومية عالية الحساسية.",
+            exp_tags: ["Active Directory", "LAPS & GPO", "Windows 11", "دعم فني"],
             projects_title: "مشاريعي",
             filter_all: "الكل",
             filter_web: "ويب",
@@ -93,17 +95,17 @@ document.addEventListener('DOMContentLoaded', () => {
             filter_sys: "أنظمة",
             view_details: "التفاصيل",
             proj_nibras_title: "نبراس (Nibras)",
-            proj_nibras_mini_desc: "منصة مسابقات تفاعلية متكاملة تضم بوابة الدفع 'ميسر' (Moyasar) ومزامنة سحابية لحظية عبر Supabase.",
-            proj_nibras_desc: "منصة مسابقات تفاعلية متكاملة. تم تطوير الواجهة باستخدام أحدث تقنيات الويب، مع ربطها بقاعدة بيانات سحابية (Supabase) تدعم المزامنة اللحظية وتطبيق سياسات أمان متقدمة (RLS). أبرز ما يميز المشروع هو الدمج المباشر مع بوابة الدفع 'ميسر' (Moyasar) لمعالجة العمليات المالية بأمان، بالإضافة إلى نشر المنصة وإدارتها عبر بيئات سحابية مثل Vercel و CranL.",
-            proj_nibras_tags: ["Flutter", "Supabase", "بوابة ميسر", "FinTech"],
+            proj_nibras_mini_desc: "منصة مسابقات تفاعلية متكاملة تضم بوابة الدفع 'ماي فاتوره' (My Fatoorah) ومزامنة سحابية لحظية عبر Supabase.",
+            proj_nibras_desc: "منصة مسابقات تفاعلية متكاملة. تم تطوير الواجهة باستخدام أحدث تقنيات الويب، مع ربطها بقاعدة بيانات سحابية (Supabase) تدعم المزامنة اللحظية وتطبيق سياسات أمان متقدمة (RLS). أبرز ما يميز المشروع هو الدمج المباشر مع بوابة الدفع 'ماي فاتوره' (My Fatoorah) لمعالجة العمليات المالية بأمان، بالإضافة إلى نشر المنصة وإدارتها عبر Vercel.",
+            proj_nibras_tags: ["Flutter", "Supabase", "ماي فاتوره", "FinTech"],
             proj_asl_title: "التعرف على لغة الإشارة العربية",
             proj_asl_mini_desc: "تطبيق ذكي يعتمد على نماذج TFLite للترجمة الفورية للغة الإشارة ومعالجة الرؤية الحاسوبية محلياً.",
-            proj_asl_desc: "تطبيق ذكي يعتمد على حوسبة الحافة (Edge Computing) لمعالجة الرؤية الحاسوبية في الوقت الفعلي. تم دمج نماذج تعلم الآلة (TFLite) مباشرة داخل بيئة Flutter لتحليل حركات اليد عبر كاميرا الهاتف وترجمتها فورياً دون الحاجة للاتصال بخوادم خارجية، مما يضمن سرعة الأداء والخصوصية.",
-            proj_asl_tags: ["Flutter", "TensorFlow Lite", "رؤية حاسوبية", "ذكاء اصطناعي"],
+            proj_asl_desc: "تطبيق ذكي يعتمد على حوسبة الحافة (Edge Computing) لمعالجة الرؤية الحاسوبية في الوقت الفعلي. تم دمج نماذج تعلم الآلة (TFLite) مباشرة داخل بيئة Flutter لتحليل حركات اليد عبر كاميرا الهاتف وترجمتها فورياً دون الحاجة للاتصال بخوادم خارجية، مما يضمن سرعة الأداء والخصوصية. يعمل التطبيق على سيرفر لينكس شخصي ويُنشر بأمان عبر Cloudflare.",
+            proj_asl_tags: ["Flutter", "TensorFlow Lite", "رؤية حاسوبية", "ذكاء اصطناعي", "Cloudflare"],
             proj_res_title: "حجوزاتي (MyReservations)",
             proj_res_mini_desc: "منصة ويب متكاملة مبنية بـ PHP و SQL مخصصة لإدارة حجوزات المطاعم وتنظيم السعات التشغيلية بكفاءة.",
-            proj_res_desc: "نظام 'MyReservations' هو حل تقني متكامل لإدارة الأعمال في قطاع الضيافة. تم بناء الواجهة الخلفية باستخدام PHP وقواعد بيانات SQL لإدارة عمليات منطقية معقدة، مثل خوارزميات توزيع الطاولات، التأكيدات التلقائية، وجدولة المواعيد المتقدمة التي تمنع تعارض الحجوزات، مع التركيز العالي على سلامة البيانات وسرعة المعالجة.",
-            proj_res_tags: ["PHP", "MySQL", "تطوير شامل", "قواعد بيانات"],
+            proj_res_desc: "نظام 'MyReservations' هو حل تقني متكامل لإدارة الأعمال في قطاع الضيافة. تم بناء الواجهة الخلفية باستخدام PHP وقواعد بيانات SQL لإدارة عمليات منطقية معقدة، مثل خوارزميات توزيع الطاولات، التأكيدات التلقائية، وجدولة المواعيد المتقدمة التي تمنع تعارض الحجوزات، مع التركيز العالي على سلامة البيانات وسرعة المعالجة. المنصة مستضافة على سيرفر لينكس شخصي ومؤمّنة عبر Cloudflare.",
+            proj_res_tags: ["PHP", "MySQL", "تطوير شامل", "قواعد بيانات", "Cloudflare"],
             proj_srv_title: "السيرفر المنزلي والأتمتة",
             proj_srv_mini_desc: "بنية تحتية ذاتية الاستضافة تعتمد على نظام Arch Linux مع نماذج ذكاء اصطناعي محلية (Ollama) وأتمتة n8n.",
             proj_srv_desc: "بنية تحتية متكاملة ذاتية الاستضافة مبنية على نظام Arch Linux. تم تصميم البيئة باستخدام تقنية Docker لعزل وإدارة الحاويات بكفاءة. يتضمن المشروع نشر نماذج ذكاء اصطناعي محلية (مثل Ollama و Open WebUI) لضمان الخصوصية، بالإضافة إلى بناء مسارات عمل مؤتمتة بالكامل باستخدام أداة n8n لتقليل التدخل اليدوي.",
@@ -121,6 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
             footer_rights: "جميع الحقوق محفوظة.",
             modal_features_title: "المميزات الرئيسية",
             live_demo: "رابط حي",
+            typing_words: ["خريج علوم حاسب", "بنية تحتية وخوادم", "مطور حلول تقنية"],
         }
     };
 
@@ -129,22 +132,22 @@ document.addEventListener('DOMContentLoaded', () => {
         nibras: {
             liveLink: "https://nibras.fun",
             features: {
-                en: ["Native cross-platform execution (Flutter)", "Moyasar Payment Gateway Integration", "Cloud-native BaaS (Supabase/PostgreSQL)", "Dynamic difficulty weight system", "Real-time global leaderboard & state sync", "Robust RLS (Row Level Security) policies"],
-                ar: ["تنفيذ أصيل عبر المنصات (Flutter)", "دمج بوابة الدفع 'ميسر' (Moyasar)", "اعتماد كامل على الخدمات السحابية (Supabase/PostgreSQL)", "نظام موازنة ديناميكي لمستويات الصعوبة", "لوحة صدارة عالمية ومزامنة لحظية للحالات", "سياسات أمنية متقدمة لحماية البيانات (RLS)"]
+                en: ["Tactical game mode with territory-claim system & real-time multiplayer scoring", "SQL RPCs for game state management & Sparks currency system", "My Fatoorah Payment Gateway Integration", "Cloud-native BaaS (Supabase/PostgreSQL) with RLS policies", "Real-time global leaderboard & state sync", "Reduced Motion accessibility compliance"],
+                ar: ["وضع لعب Tactical بنظام استحواذ على المناطق ونقاط لحظية متعددة اللاعبين", "SQL RPCs لإدارة حالة اللعبة ونظام عملة 'Sparks'", "دمج بوابة الدفع 'ماي فاتوره' (My Fatoorah)", "اعتماد كامل على الخدمات السحابية (Supabase/PostgreSQL) مع سياسات RLS", "لوحة صدارة عالمية ومزامنة لحظية للحالات", "دعم كامل لمعايير إمكانية الوصول (Reduced Motion)"]
             }
         },
         asl: {
             liveLink: "https://ARSL.altamimi.tech",
             features: {
-                en: ["High-accuracy Hand-pose detection", "Edge computing using TFLite (No server needed)", "Real-time vision processing (high FPS)", "Intuitive interface for disability assistance", "Supports multiple gestures and word patterns"],
-                ar: ["كشف دقيق لوضعيات اليد وحركاتها", "معالجة طرفية (TFLite) تعمل دون الحاجة للخوادم", "معالجة رؤية حاسوبية فورية بمعدل إطارات عالٍ", "واجهة بديهية مصممة لمساعدة المعاقين سمعياً", "يدعم أنماط متعددة للإيماءات والمفردات"]
+                en: ["Custom CNN model (TFLite) recognizing 31 Arabic letters with 85%+ accuracy", "MediaPipe & OpenCV inference pipeline with motion detection triggers", "TensorFlow.js web version for client-side browser inference", "Arabic NLP autocorrection using fuzzy string matching", "Docker + FastAPI backend with Flutter cross-platform integration"],
+                ar: ["نموذج CNN مخصص (TFLite) يتعرف على ٣١ حرفاً عربياً بدقة تتجاوز ٨٥٪", "خط معالجة MediaPipe و OpenCV مع مشغلات كشف الحركة لتقليل الأخطاء", "نسخة ويب باستخدام TensorFlow.js للمعالجة على جانب المتصفح", "معالجة NLP عربية للتصحيح التلقائي باستخدام fuzzy string matching", "نشر Docker + FastAPI مع تكامل Flutter لجميع المنصات"]
             }
         },
         reservations: {
             liveLink: "https://MyReservations.altamimi.tech",
             features: {
-                en: ["Relational schema design for high integrity", "Conflict-prevention scheduling algorithms", "Full-scale administrative dashboard", "Email/SMS automated notification support", "Performance-optimized SQL queries"],
-                ar: ["تصميم قواعد بيانات علائقية بسلامة عالية", "خوارزميات جدولة متقدمة تمنع التداخل", "لوحة تحكم كاملة للإدارة والتقارير", "دعم الإشعارات التلقائية (SMS/Email)", "استعلامات SQL معالجة لضمان سرعة الاستجابة"]
+                en: ["Relational schema design for high integrity", "Conflict-prevention scheduling algorithms", "Full-scale administrative dashboard", "Automated email notification support", "Performance-optimized SQL queries"],
+                ar: ["تصميم قواعد بيانات علائقية بسلامة عالية", "خوارزميات جدولة متقدمة تمنع التداخل", "لوحة تحكم كاملة للإدارة والتقارير", "دعم الإشعارات التلقائية عبر البريد الإلكتروني", "استعلامات SQL معالجة لضمان سرعة الاستجابة"]
             }
         },
         server: {
@@ -204,6 +207,30 @@ document.addEventListener('DOMContentLoaded', () => {
             updateContent();
         });
     }
+
+    // CV Modal Logic
+    const cvModal = document.getElementById('cv-modal');
+    const viewCvBtn = document.getElementById('view-cv-btn');
+    const closeCvBtn = document.getElementById('close-cv-modal');
+
+    if (viewCvBtn) {
+        viewCvBtn.addEventListener('click', () => {
+            cvModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+    }
+    if (closeCvBtn) {
+        closeCvBtn.addEventListener('click', () => {
+            cvModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+    }
+    window.addEventListener('click', (e) => {
+        if (e.target === cvModal) {
+            cvModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
 
     // Modal Logic
     const modal = document.getElementById('project-modal');

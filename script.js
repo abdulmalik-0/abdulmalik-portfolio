@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalDesc = document.getElementById('modal-desc');
     const modalTags = document.getElementById('modal-tags');
     const modalFeaturesList = document.getElementById('modal-features-list');
-    const closeBtn = document.querySelector('.close-modal');
+    const closeBtn = document.getElementById('close-project-modal');
 
     document.querySelectorAll('.view-btn').forEach(btn => {
         btn.addEventListener('click', () => {

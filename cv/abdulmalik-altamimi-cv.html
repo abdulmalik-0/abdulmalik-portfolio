@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Abdulmalik Ibrahim Altamimi - CV</title>
+    <!--
+        General one-page CV (source). Edit the text here, then rebuild the PDF:
+        see cv/build-cv.sh. Output goes to assets/abdulmalik-altamimi.pdf.
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Margins live on @page so any overflow becomes a real second page (easy to spot). */
+        @page {
+            size: A4;
+            margin: 10mm 15mm 9mm;
+        }
+
+        :root {
+            --navy: #16264a;
+            --ink: #1c2434;
+            --muted: #56678a;
+            --rule: #c9d1e0;
+            --size: 8.5pt;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: var(--size);
+            line-height: 1.34;
+            color: var(--ink);
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 6pt;
+            border-bottom: 1.4pt solid var(--navy);
+        }
+
+        h1 {
+            font-family: 'Lora', Georgia, serif;
+            font-weight: 700;
+            font-size: 23pt;
+            line-height: 1.1;
+            color: var(--navy);
+        }
+
+        .title {
+            margin-top: 3pt;
+            font-size: 8.6pt;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        .contact {
+            margin-top: 4.5pt;
+            font-size: 8.4pt;
+            font-weight: 500;
+            color: var(--navy);
+        }
+
+        .contact span {
+            padding: 0 6pt;
+            border-left: 0.6pt solid var(--rule);
+        }
+
+        .contact span:first-child {
+            border-left: 0;
+        }
+
+        .contact .place {
+            color: var(--muted);
+            font-weight: 400;
+        }
+
+        h2 {
+            font-family: 'Lora', Georgia, serif;
+            font-weight: 700;
+            font-size: 10.6pt;
+            color: var(--navy);
+            margin-top: 7pt;
+            padding-bottom: 1.5pt;
+            margin-bottom: 3pt;
+            border-bottom: 0.7pt solid var(--rule);
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 12pt;
+        }
+
+        .org {
+            font-weight: 700;
+            font-size: 9.2pt;
+            color: var(--navy);
+        }
+
+        .meta {
+            color: var(--muted);
+            white-space: nowrap;
+        }
+
+        .role {
+            font-style: italic;
+            color: var(--muted);
+        }
+
+        .job+.job,
+        .project+.project {
+            margin-top: 3.5pt;
+        }
+
+        /* Native markers keep bullets in normal flow, so the PDF text order stays correct for ATS parsers. */
+        ul {
+            list-style: disc;
+            margin-top: 1.5pt;
+            padding-left: 10pt;
+        }
+
+        li::marker {
+            color: var(--muted);
+            font-size: 0.85em;
+        }
+
+        b {
+            font-weight: 600;
+        }
+
+        .project .link {
+            font-style: italic;
+            font-weight: 400;
+            font-size: 8.2pt;
+            color: var(--muted);
+            margin-left: 5pt;
+        }
+
+        .edu .note {
+            color: var(--muted);
+        }
+
+        .edu .row+.row {
+            margin-top: 2pt;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            width: 35mm;
+            white-space: nowrap;
+            text-align: left;
+            vertical-align: top;
+            font-weight: 600;
+            color: var(--navy);
+            padding: 0.6pt 0;
+        }
+
+        td {
+            vertical-align: top;
+            padding: 0.6pt 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Abdulmalik Ibrahim Altamimi</h1>
+        <p class="title">IT Specialist | Infrastructure, Systems &amp; Automation</p>
+        <p class="contact">
+            <span><a href="mailto:airzt01@gmail.com">airzt01@gmail.com</a></span><span><a
+                    href="tel:+966594006221">+966 59 400 6221</a></span><span class="place">Riyadh, Saudi
+                Arabia</span><span><a href="https://abdulmalik.altamimi.tech/">Portfolio</a></span><span><a
+                    href="https://github.com/abdulmalik-0">GitHub</a></span><span><a
+                    href="https://www.linkedin.com/in/abdulmalik-altamimi-b5597a224/">LinkedIn</a></span>
+        </p>
+    </header>
+
+    <section>
+        <h2>Summary</h2>
+        <p>IT Specialist with hands-on experience across infrastructure, identity, and IT operations in private and
+            government environments. At Gulf Link, I ran multi-site surveillance infrastructure over WireGuard
+            site-to-site VPN, managed IT assets and licenses in Snipe-IT, handled IT procurement in Microsoft Dynamics
+            365, and automated workflows with n8n. At the Ministry of Commerce, I administered Active Directory
+            accounts, GPOs, and LAPS and supported end users. KSU Computer Science graduate, SCE-accredited; I also
+            build AI and real-time applications with Python, Docker, and Flutter.</p>
+    </section>
+
+    <section>
+        <h2>Experience</h2>
+        <div class="job">
+            <div class="row"><span class="org">Gulf Link</span><span class="meta">Riyadh, Saudi Arabia</span></div>
+            <div class="row"><span class="role">IT Specialist</span><span class="meta">Aug 2026 – Nov 2026</span></div>
+            <ul>
+                <li>Deployed <b>Frigate NVR</b> on <b>Docker Compose</b> to centralize monitoring of <b>39 Hikvision IP
+                        cameras</b> across <b>3 sites in Riyadh and Dammam</b>, with continuous recording and defined
+                    retention policies.</li>
+                <li>Linked remote sites over <b>WireGuard</b> site-to-site VPN for secure centralized streaming and
+                    recording across cities.</li>
+                <li>Resolved YAML and dashboard configuration issues that limited the live view to 10 cameras, bringing
+                    all 39 feeds online.</li>
+                <li>Deployed <b>Snipe-IT</b> to track IT assets, software licenses, device lifecycle, and employee
+                    equipment custody.</li>
+                <li>Built pilot <b>n8n</b> automation workflows integrated with databases to streamline RFQ processing
+                    and supplier evaluation.</li>
+                <li>Submitted and tracked departmental purchase requests and approvals through <b>Microsoft Dynamics
+                        365</b>.</li>
+                <li>Registered the company on the <b>Hikvision Technology Partner Portal (TPP)</b> to obtain official
+                    <b>ISAPI/SDK</b> documentation for future system integrations.</li>
+            </ul>
+        </div>
+        <div class="job">
+            <div class="row"><span class="org">Ministry of Commerce</span><span class="meta">Riyadh, Saudi
+                    Arabia</span></div>
+            <div class="row"><span class="role">IT Support &amp; Systems Administration Intern</span><span
+                    class="meta">Jun 2025 – Jan 2026</span></div>
+            <ul>
+                <li>Managed the user account lifecycle in <b>Active Directory</b>: creating accounts, organizing OUs,
+                    updating access, and disabling accounts for leavers.</li>
+                <li>Applied <b>Group Policy Objects (GPOs)</b> to enforce security and configuration settings across
+                    domain-joined devices.</li>
+                <li>Administered <b>LAPS</b> to secure and rotate local administrator passwords across endpoints.</li>
+                <li>Executed the enterprise <b>Windows 11 migration</b> for employee workstations, ensuring smooth
+                    transitions and data integrity.</li>
+                <li>Supported end users on OS, software, and hardware issues, documenting and resolving tickets in a
+                    government environment.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="edu">
+        <h2>Education &amp; Certifications</h2>
+        <div class="row"><span class="org">King Saud University — B.Sc. Computer Science</span><span
+                class="meta">2020 – 2026</span></div>
+        <p class="note">Relevant coursework: Computer Networks, Operating Systems, Database Management, Artificial
+            Intelligence.</p>
+        <div class="row"><span class="org">Saudi Council of Engineers (SCE) — Professional Accreditation</span><span
+                class="meta">2026</span></div>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        <div class="project">
+            <p><span class="org">Arabic Sign Language Real-Time Translator</span><a class="link"
+                    href="https://arsl.altamimi.tech/">arsl.altamimi.tech</a></p>
+            <ul>
+                <li>Trained a custom <b>CNN (TFLite)</b> model to recognize 31 Arabic letters, with a
+                    <b>MediaPipe/OpenCV</b> inference pipeline and motion triggers to reduce false positives.</li>
+                <li>Deployed the system with <b>Docker</b> and <b>FastAPI</b>, plus a <b>TensorFlow.js</b> browser
+                    version for private client-side inference and Arabic word autocorrection.</li>
+            </ul>
+        </div>
+        <div class="project">
+            <p><span class="org">Nibras — Real-Time Educational Platform</span><a class="link"
+                    href="https://www.nibras.fun/">nibras.fun</a></p>
+            <ul>
+                <li>Built a real-time multiplayer learning platform with <b>Flutter</b> and <b>Supabase</b>, including
+                    a territory-claim game mode with live scoring and secure <b>SQL RPCs</b> for game state and in-app
+                    currency.</li>
+            </ul>
+        </div>
+        <div class="project">
+            <p><span class="org">MyReservation — Web Reservation System</span><a class="link"
+                    href="https://myreservations.altamimi.tech/">myreservations.altamimi.tech</a></p>
+            <ul>
+                <li>Built a web reservation system handling concurrent bookings with real-time availability, user
+                    authentication, and role-based access control.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+        <table>
+            <tr>
+                <th>Networking &amp; Infra</th>
+                <td>WireGuard (Site-to-Site VPN), TCP/IP Fundamentals, Network Troubleshooting, IP Surveillance
+                    (Frigate NVR, Hikvision ISAPI), Ubuntu Server</td>
+            </tr>
+            <tr>
+                <th>Identity &amp; Systems</th>
+                <td>Active Directory (Users, OUs, Groups), Account Provisioning &amp; Deprovisioning, Group Policy
+                    (GPO), LAPS, Windows 10/11 Deployment</td>
+            </tr>
+            <tr>
+                <th>IT Operations</th>
+                <td>Snipe-IT (Assets, Licenses, Custody), Microsoft Dynamics 365 (Requests &amp; Approvals), Ticket
+                    Handling, End-User Support, Hardware Troubleshooting</td>
+            </tr>
+            <tr>
+                <th>DevOps &amp; Automation</th>
+                <td>Docker, Docker Compose, n8n, Git, YAML, Python, SQL</td>
+            </tr>
+            <tr>
+                <th>Development &amp; AI</th>
+                <td>FastAPI, Flutter/Dart, Supabase, JavaScript, TensorFlow Lite, TensorFlow.js, Keras, OpenCV,
+                    MediaPipe</td>
+            </tr>
+            <tr>
+                <th>Languages</th>
+                <td>Arabic (Native), English (Professional)</td>
+            </tr>
+        </table>
+    </section>
+</body>
+
+</html>

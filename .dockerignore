@@ -1,0 +1,11 @@
+.git
+.claude
+.vscode
+node_modules
+dist
+portfolio-app
+cv
+*.md
+.dockerignore
+docker-compose.yml
+Dockerfile

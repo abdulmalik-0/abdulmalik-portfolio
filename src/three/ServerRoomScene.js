@@ -5,8 +5,9 @@
 //   Identity        an access-controlled door with a card reader
 //   Operations      an asset shelf of laptops and tagged boxes
 //   Automation      a desk whose monitor runs an n8n workflow
+//   Home lab        a short rack on wheels: a switch, two Proxmox mini PCs, a NAS and a UPS
 //
-// Each corner is lit in its track colour. Five hotspot labels (ordinary DOM elements) are kept on
+// Each corner is lit in its track colour. Six hotspot labels (ordinary DOM elements) are kept on
 // their objects every frame; highlighting a label brightens its corner. The room builds itself on
 // load, turns a little with the pointer, and turns and moves in as the hero scrolls away.
 //
@@ -78,7 +79,8 @@ const FOCUS_ANGLES = [
   { az: -0.08, el: 0.16 }, // network wall, from the left of the plant
   { az: 1.15, el: 0.2 }, // door, from across the room
   { az: 1.35, el: 0.34 }, // shelves, over the open floor
-  { az: 0.15, el: 0.48 } // desk, from in front and above the chair
+  { az: 0.15, el: 0.48 }, // desk, from in front and above the chair
+  { az: 0.42, el: 0.22 } // home lab, from beyond the open side
 ];
 // How quickly the camera closes on where it should be (per second)
 const CAMERA_RATE = 3.2;
@@ -292,6 +294,79 @@ function switchFace(rnd, ledsOnly) {
   });
 }
 
+/** The home lab's front: a switch, two Proxmox mini PCs, a four-bay NAS and a UPS with its display. */
+function drawHomelab(g, w, h, ledsOnly) {
+  g.fillStyle = ledsOnly ? '#000000' : '#0b1020';
+  g.fillRect(0, 0, w, h);
+  const led = (x, y, color, r = 3) => {
+    g.fillStyle = color;
+    g.beginPath();
+    g.arc(x, y, r, 0, Math.PI * 2);
+    g.fill();
+  };
+  const body = (x, y, bw, bh, color) => {
+    if (ledsOnly) return;
+    g.fillStyle = color;
+    g.fillRect(x, y, bw, bh);
+    g.fillStyle = 'rgba(255, 255, 255, 0.07)';
+    g.fillRect(x, y, bw, 2);
+  };
+  // Switch: eight ports with their link lights
+  body(10, 10, w - 20, 34, '#1c2748');
+  for (let p = 0; p < 8; p++) {
+    const x = 24 + p * 25;
+    if (!ledsOnly) {
+      g.fillStyle = '#05080f';
+      g.fillRect(x, 22, 17, 15);
+    }
+    if (p !== 5) {
+      g.fillStyle = p % 3 === 2 ? '#FFCB2E' : '#35D08A';
+      g.fillRect(x + 2, 15, 6, 3);
+    }
+  }
+  // Two mini PCs, the Proxmox nodes
+  [10, 124].forEach((x, k) => {
+    body(x, 52, 106, 66, '#222d52');
+    if (!ledsOnly) {
+      g.fillStyle = 'rgba(255, 255, 255, 0.08)';
+      for (let v = 0; v < 6; v++) g.fillRect(x + 44 + v * 9, 62, 4, 46);
+      g.fillStyle = '#8e9ab8';
+      g.font = '600 14px sans-serif';
+      g.fillText(`pve${k + 1}`, x + 8, 108);
+    }
+    led(x + 16, 68, '#4C8DFF', 4);
+  });
+  // NAS: four drive bays, each with a status and an activity light
+  body(10, 126, w - 20, 136, '#161f3d');
+  for (let b = 0; b < 4; b++) {
+    const x = 18 + b * 52;
+    if (!ledsOnly) {
+      g.fillStyle = '#0c1226';
+      g.fillRect(x, 136, 44, 116);
+      g.fillStyle = 'rgba(255, 255, 255, 0.1)';
+      g.fillRect(x + 6, 232, 32, 4);
+    }
+    led(x + 12, 148, '#35D08A');
+    led(x + 26, 148, b === 2 ? TRACK_COLORS[5] : '#4C8DFF');
+  }
+  // UPS, its display reading full charge
+  body(10, 270, w - 20, 120, '#121a33');
+  g.fillStyle = ledsOnly ? '#0d3a35' : '#0b2b2a';
+  g.fillRect(70, 288, 100, 44);
+  g.fillStyle = '#5ef2c8';
+  g.font = '700 24px sans-serif';
+  g.fillText('100%', 88, 320);
+  led(54, 302, '#35D08A', 4);
+  if (!ledsOnly) {
+    g.fillStyle = '#26315a';
+    [92, 120, 148].forEach(x => {
+      g.beginPath();
+      g.arc(x, 362, 8, 0, Math.PI * 2);
+      g.fill();
+    });
+  }
+}
+
 function floorTexture() {
   return canvasTexture(1024, 1024, (g, w) => {
     g.fillStyle = '#1b2345';
@@ -413,7 +488,7 @@ export class ServerRoomScene {
   /**
    * @param canvas   the canvas to draw on
    * @param box      the element whose size the canvas fills
-   * @param hotspots five elements (one per track) to keep positioned over their objects
+   * @param hotspots one element per track to keep positioned over their objects
    * @param models   the furniture, from loadRoomModels()
    * Throws if WebGL is not available; the hero then shows a still picture instead.
    */
@@ -705,6 +780,46 @@ export class ServerRoomScene {
     cornerLight(1, 2.3, 1.5, INNER + 1.1, 2.6, 3);
     parts.push([network, 0.85, 'drop']);
 
+    /* 5 Home lab: a short open rack on wheels beside the network gear, holding a switch, two
+       Proxmox mini PCs, a four-bay NAS and a UPS */
+    const homelab = new Group();
+    const labFrame = std('#1a2140', 0.45, 0.6);
+    const RW = 0.62; // rack width, depth, and height of its frame
+    const RD = 0.6;
+    const RH = 1.0;
+    const lift = 0.07; // the wheels
+    [[-1, -1], [1, -1], [-1, 1], [1, 1]].forEach(([sx, sz]) => {
+      homelab.add(at(box(0.035, RH, 0.035, labFrame), sx * (RW / 2 - 0.018), lift, sz * (RD / 2 - 0.018)));
+      const wheel = lit(new Mesh(new CylinderGeometry(0.03, 0.03, 0.025, 14), std('#0b0f1e', 0.6, 0.2)));
+      wheel.rotation.z = Math.PI / 2;
+      wheel.position.set(sx * (RW / 2 - 0.05), 0.03, sz * (RD / 2 - 0.05));
+      homelab.add(wheel);
+    });
+    homelab.add(at(box(RW, 0.03, RD, labFrame), 0, lift, 0));
+    homelab.add(at(box(RW, 0.03, RD, labFrame), 0, lift + RH - 0.03, 0));
+    // The gear inside, and its front
+    homelab.add(at(box(0.54, 0.86, 0.5, std('#10172d', 0.5, 0.4)), 0, lift + 0.05, -0.02));
+    const labFace = new MeshStandardMaterial({
+      map: canvasTexture(240, 400, (g, w, h) => drawHomelab(g, w, h, false)),
+      emissiveMap: canvasTexture(240, 400, (g, w, h) => drawHomelab(g, w, h, true)),
+      emissive: '#ffffff',
+      emissiveIntensity: 2.6,
+      roughness: 0.5,
+      metalness: 0.4
+    });
+    this.rackMaterials.push(labFace);
+    homelab.add(at(new Mesh(new PlaneGeometry(0.5, 0.833), labFace), 0, lift + 0.05 + 0.43, 0.232));
+    // A thin light along the top front edge, in the track's colour
+    homelab.add(at(new Mesh(new BoxGeometry(RW - 0.06, 0.012, 0.012), glowMaterial(TRACK_COLORS[5])), 0, lift + RH + 0.008, RD / 2 - 0.01));
+    homelab.add(shadowPatch(1.0, 1.0, 0, 0, 0.55));
+    const labPool = pool(TRACK_COLORS[5], 1.5, 1.5, 0, 0.55, 0.2);
+    homelab.add(labPool);
+    homelab.position.set(3.05, 0, -2.85);
+    homelab.rotation.y = 0.25;
+    room.add(homelab);
+    cornerLight(5, 2.95, 1.3, -2.15, 2.2, 2.6);
+    parts.push([homelab, 1.0, 'drop']);
+
     /* Cameras: one over the network corner, one over the door */
     this.cameraLeds = [];
     const wallCamera = (position, look) => {
@@ -881,7 +996,7 @@ export class ServerRoomScene {
     parts.forEach(([object]) => {
       object.userData.baseY = object.position.y;
     });
-    this.pools = [rackPool, networkPool, accessPool, opsPool, autoPool];
+    this.pools = [rackPool, networkPool, accessPool, opsPool, autoPool, labPool];
 
     // One hotspot per track, in track order, anchored on the object's most visible point.
     const appearAt = object => {
@@ -893,11 +1008,12 @@ export class ServerRoomScene {
       { object: router, offset: new Vector3(0, 0.3, 0.1), appearAt: appearAt(network) },
       { object: reader, offset: new Vector3(0.03, 0.12, 0), appearAt: appearAt(access) },
       { object: shelf, offset: new Vector3(0, 1.8, 0.1), appearAt: appearAt(shelf) },
-      { object: monitorScreen, offset: new Vector3(0, 0.24, 0), appearAt: appearAt(desk) }
+      { object: monitorScreen, offset: new Vector3(0, 0.24, 0), appearAt: appearAt(desk) },
+      { object: homelab, offset: new Vector3(0, 1.12, 0.05), appearAt: appearAt(homelab) }
     ];
 
     // Clicking anything in a corner opens its track: each corner's group carries its number.
-    const corners = [racks, network, access, shelf, desk];
+    const corners = [racks, network, access, shelf, desk, homelab];
     corners.forEach((group, track) => {
       group.userData.track = track;
     });

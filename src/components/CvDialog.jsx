@@ -1,12 +1,45 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useLang } from '../lang.jsx';
 import { LINKS } from '../content.js';
 import { setScrollLocked } from '../lib/motion.js';
 
-/** The CV shown in a native dialog: Esc, the Close button and a click outside all close it. */
+// The CV page's size on screen: the A4 sheet (210mm) and the 20px desk around it (public/cv.html).
+const SHEET_WIDTH = 834;
+const SHEET_HEIGHT = 1163;
+
+/**
+ * The CV shown in a native dialog: Esc, the Close button and a click outside all close it.
+ * It shows the CV's web page (public/cv.html), drawn at its real size and scaled to the dialog's
+ * width, rather than the PDF: phones and some browsers cannot show a PDF inside a page and
+ * download it instead. The PDF stays one click away.
+ */
 export default function CvDialog({ open, onClose }) {
   const { t } = useLang();
   const ref = useRef(null);
+  const viewRef = useRef(null);
+  const frameRef = useRef(null);
+  const [scale, setScale] = useState(1);
+  const [height, setHeight] = useState(SHEET_HEIGHT);
+
+  // The sheet fills the dialog's width (a little larger than life on wide screens at most).
+  useEffect(() => {
+    if (!open) return undefined;
+    const view = viewRef.current;
+    const fit = () => setScale(Math.min(1.25, view.clientWidth / SHEET_WIDTH));
+    fit();
+    const observer = new ResizeObserver(fit);
+    observer.observe(view);
+    return () => observer.disconnect();
+  }, [open]);
+
+  // The page's own height, in case it ever runs past one sheet
+  const measure = () => {
+    try {
+      setHeight(frameRef.current.contentDocument.documentElement.scrollHeight || SHEET_HEIGHT);
+    } catch {
+      setHeight(SHEET_HEIGHT);
+    }
+  };
 
   useEffect(() => {
     const dialog = ref.current;
@@ -37,7 +70,7 @@ export default function CvDialog({ open, onClose }) {
         <div className="cv-bar">
           <h2 id="cv-title">{t.cv.title}</h2>
           <div className="cv-actions">
-            <a className="text-link" href={LINKS.cv} target="_blank" rel="noreferrer">
+            <a className="text-link" href={LINKS.cvPage} target="_blank" rel="noreferrer">
               {t.cv.openTab}
             </a>
             <a className="btn btn-line btn-small" href={LINKS.cv} download>
@@ -48,7 +81,20 @@ export default function CvDialog({ open, onClose }) {
             </button>
           </div>
         </div>
-        {open && <iframe className="cv-frame" src={LINKS.cv} title={t.cv.title} />}
+        <div className="cv-view" ref={viewRef}>
+          {open && (
+            <div className="cv-sheet" style={{ width: SHEET_WIDTH * scale, height: height * scale }}>
+              <iframe
+                ref={frameRef}
+                className="cv-frame"
+                src={LINKS.cvPage}
+                title={t.cv.title}
+                onLoad={measure}
+                style={{ width: SHEET_WIDTH, height, transform: `scale(${scale})` }}
+              />
+            </div>
+          )}
+        </div>
       </div>
     </dialog>
   );

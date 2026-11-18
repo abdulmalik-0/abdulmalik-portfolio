@@ -10,8 +10,9 @@ export default defineConfig({
   build: {
     // Keep the built bundle apart from public/assets (images and the CV PDF).
     assetsDir: 'static',
-    // three.js loads as its own chunk (about 570 kB before gzip), which is expected.
-    chunkSizeWarningLimit: 650
+    // The 3D room loads after first paint as its own chunk: three.js plus the scene, about
+    // 650 kB before gzip (165 kB after), which is expected.
+    chunkSizeWarningLimit: 720
   },
   server: { port: 5173 }
 });

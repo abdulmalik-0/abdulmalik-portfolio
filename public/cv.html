@@ -3,11 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
+    <!-- Phones show the whole A4 sheet, which can then be pinched to zoom. -->
+    <meta name="viewport" content="width=842">
     <title>Abdulmalik Ibrahim Altamimi - CV</title>
     <!--
-        General one-page CV (source). Edit the text here, then rebuild the PDF:
-        see cv/build-cv.sh. Output goes to assets/abdulmalik-altamimi.pdf.
+        General one-page CV, and its only source. The site shows this page in its CV dialog and
+        at /cv.html; the PDF is printed from it: edit the text here, then run cv/build-cv.sh
+        (writes public/assets/abdulmalik-altamimi.pdf).
     -->
+    <!-- Links open in a new tab, so they never replace the CV inside the site's dialog. -->
+    <base target="_blank">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -180,6 +185,24 @@
         td {
             vertical-align: top;
             padding: 0.6pt 0;
+        }
+
+        /* On screen: the A4 sheet on a grey desk, with the printed page's margins (10mm 15mm 9mm)
+           as padding. Printing ignores all of this; the site's CV dialog relies on the sizes
+           (210mm wide plus 20px each side). */
+        @media screen {
+            html {
+                background: #e4e8f0;
+            }
+
+            body {
+                width: 210mm;
+                min-height: 297mm;
+                margin: 20px auto;
+                padding: 10mm 15mm 9mm;
+                background: #ffffff;
+                box-shadow: 0 2px 6px rgba(22, 38, 74, 0.08), 0 18px 40px -12px rgba(22, 38, 74, 0.28);
+            }
         }
     </style>
 </head>

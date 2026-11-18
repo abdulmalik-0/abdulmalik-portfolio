@@ -7,7 +7,8 @@ export const LINKS = {
   phoneHref: 'tel:+966594006221',
   github: 'https://github.com/abdulmalik-0',
   linkedin: 'https://www.linkedin.com/in/abdulmalik-altamimi-b5597a224/',
-  cv: '/assets/abdulmalik-altamimi.pdf',
+  cv: '/assets/abdulmalik-altamimi.pdf', // the PDF, for downloading
+  cvPage: '/cv.html', // the same CV as a web page, for viewing (also its source)
   formAction: 'https://formspree.io/f/xreajwdb'
 };
 
@@ -21,7 +22,7 @@ const PROJECT_MEDIA = [
   { id: 'arsl', banner: '/assets/project_asl.png', logo: null, url: 'https://arsl.altamimi.tech/', host: 'arsl.altamimi.tech', track: 4, stack: ['TensorFlow Lite', 'MediaPipe', 'OpenCV', 'FastAPI', 'Docker'] },
   { id: 'nibras', banner: '/assets/project_nibras.png', logo: '/assets/nibras_logo.png', url: 'https://www.nibras.fun/', host: 'nibras.fun', track: 4, stack: ['Flutter', 'Supabase', 'SQL RPCs'] },
   { id: 'reservation', banner: '/assets/project_reservations.png', logo: '/assets/reservations_logo.png', url: 'https://myreservations.altamimi.tech/', host: 'myreservations.altamimi.tech', track: 4, stack: null },
-  { id: 'lab', banner: '/assets/project_server.png', logo: null, url: null, host: null, track: 0, stack: ['Proxmox', 'Ubuntu Server', 'Docker', 'RAID', 'NUT'] }
+  { id: 'lab', banner: '/assets/project_server.png', logo: null, url: null, host: null, track: 5, stack: ['Proxmox', 'Ubuntu Server', 'Docker', 'RAID', 'NUT'] }
 ];
 
 const JOB_CHIPS = [
@@ -41,7 +42,7 @@ const SKILL_ITEMS = {
   ar: [
     ['Ubuntu Server', 'Docker', 'Docker Compose', 'Frigate NVR', 'Hikvision ISAPI', 'المراقبة عبر IP'],
     ['WireGuard (Site-to-Site VPN)', 'أساسيات TCP/IP', 'استكشاف أعطال الشبكات'],
-    ['Active Directory', 'المستخدمون وOUs والمجموعات', 'إنشاء الحسابات وتعطيلها', 'Group Policy', 'LAPS', 'نشر Windows 10/11'],
+    ['Active Directory', 'المستخدمون والوحدات التنظيمية (OUs) والمجموعات', 'إنشاء الحسابات وتعطيلها', 'Group Policy', 'LAPS', 'نشر Windows 10/11'],
     ['Snipe-IT', 'الأصول والتراخيص والعهد', 'Microsoft Dynamics 365', 'معالجة التذاكر', 'دعم المستخدمين', 'استكشاف أعطال الأجهزة'],
     ['n8n', 'Python', 'SQL', 'Git', 'YAML', 'FastAPI', 'Flutter', 'Dart', 'Supabase', 'JavaScript', 'TensorFlow Lite', 'TensorFlow.js', 'Keras', 'OpenCV', 'MediaPipe'],
     ['العربية (اللغة الأم)', 'الإنجليزية (مستوى مهني)']
@@ -133,6 +134,19 @@ const en = {
         'Built a CNN in Python that reads 31 Arabic sign-language letters and runs in the browser with TensorFlow.js.'
       ],
       tools: ['n8n', 'Python', 'Docker', 'SQL']
+    },
+    {
+      name: 'Home lab',
+      tool: 'Proxmox',
+      title: 'A home lab on Proxmox',
+      note: 'Self-hosted services on Ubuntu Server and Docker.',
+      where: 'Personal project',
+      points: [
+        'Run a self-hosted lab on Proxmox and Ubuntu Server, with its services in Docker.',
+        'Keep data on RAID storage and monitor the UPS through NUT.',
+        'Host this portfolio on it, built and served with Docker Compose.'
+      ],
+      tools: ['Proxmox', 'Ubuntu Server', 'Docker', 'RAID', 'NUT']
     }
   ],
   techLabel: 'Tools I work with',
@@ -265,7 +279,7 @@ const ar = {
       note: 'دورة حياة الحسابات وأمان الأجهزة في وزارة التجارة.',
       where: 'وزارة التجارة',
       points: [
-        'أدرت دورة حياة الحسابات في Active Directory: إنشاء الحسابات، والوحدات التنظيمية، وتحديث الصلاحيات، وحسابات المغادرين.',
+        'أدرت دورة حياة الحسابات في Active Directory: إنشاء الحسابات، وتنظيم الوحدات التنظيمية، وتحديث الصلاحيات، وتعطيل حسابات المغادرين.',
         'طبقت Group Policy لفرض إعدادات الأمان والتهيئة على الأجهزة المرتبطة بالنطاق.',
         'أدرت LAPS لتأمين كلمات مرور المسؤول المحلي وتدويرها.',
         'نفذت ترحيل أجهزة الموظفين إلى Windows 11.'
@@ -280,7 +294,7 @@ const ar = {
       where: 'Gulf Link · وزارة التجارة',
       points: [
         'نشرت Snipe-IT لتتبع الأصول التقنية وتراخيص البرامج ودورة حياة الأجهزة وعهد الموظفين.',
-        'رفعت وتابعت طلبات الشراء والموافقات عبر Microsoft Dynamics 365.',
+        'رفعت طلبات الشراء والموافقات وتابعتها عبر Microsoft Dynamics 365.',
         'دعمت المستخدمين في مشاكل النظام والبرامج والأجهزة، مع توثيق كل تذكرة.'
       ],
       tools: ['Snipe-IT', 'Dynamics 365', 'التذاكر', 'دعم المستخدمين']
@@ -297,6 +311,19 @@ const ar = {
         'بنيت بـ Python نموذج CNN يقرأ ٣١ حرفاً من لغة الإشارة العربية، ويعمل في المتصفح عبر TensorFlow.js.'
       ],
       tools: ['n8n', 'Python', 'Docker', 'SQL']
+    },
+    {
+      name: 'المختبر المنزلي',
+      tool: 'Proxmox',
+      title: 'مختبر منزلي على Proxmox',
+      note: 'خدمات ذاتية الاستضافة على Ubuntu Server وDocker.',
+      where: 'مشروع شخصي',
+      points: [
+        'أدير مختبراً ذاتي الاستضافة على Proxmox وUbuntu Server، وخدماته تعمل في Docker.',
+        'أحفظ البيانات على تخزين RAID، وأراقب مزوّد الطاقة الاحتياطي (UPS) عبر NUT.',
+        'أستضيف عليه هذا الموقع، ويُبنى ويعمل عبر Docker Compose.'
+      ],
+      tools: ['Proxmox', 'Ubuntu Server', 'Docker', 'RAID', 'NUT']
     }
   ],
   techLabel: 'الأدوات التي أعمل بها',
@@ -323,7 +350,7 @@ const ar = {
           [0, 'عالجت مشاكل إعدادات YAML ولوحة العرض التي كانت تحصر العرض المباشر في ١٠ كاميرات، حتى ظهرت كل الكاميرات الـ٣٩.'],
           [3, 'نشرت Snipe-IT لتتبع الأصول التقنية وتراخيص البرامج ودورة حياة الأجهزة وعهد الموظفين.'],
           [4, 'بنيت مسارات أتمتة تجريبية على n8n مرتبطة بقواعد البيانات لتسهيل معالجة طلبات عروض الأسعار وتقييم الموردين.'],
-          [3, 'رفعت وتابعت طلبات الشراء والموافقات الخاصة بالقسم عبر Microsoft Dynamics 365.'],
+          [3, 'رفعت طلبات الشراء والموافقات الخاصة بالقسم وتابعتها عبر Microsoft Dynamics 365.'],
           [0, 'سجلت الشركة في بوابة شركاء Hikvision التقنيين للحصول على وثائق ISAPI/SDK الرسمية لتكاملات مستقبلية.']
         ]
       },
@@ -346,9 +373,9 @@ const ar = {
     newTab: 'يفتح في تبويب جديد',
     items: [
       { name: 'مترجم لغة الإشارة العربية', alt: 'عمل فني تجريدي لأيدٍ تؤشر مرسومة بالضوء', text: 'يحوّل حروف لغة الإشارة العربية إلى نص لحظياً. نموذج CNN مخصص يتعرف على ٣١ حرفاً من نقاط اليد عبر MediaPipe، ونسخة TensorFlow.js تعمل داخل المتصفح بخصوصية كاملة.' },
-      { name: 'نبراس', alt: 'عمل فني تجريدي لمنصة نبراس التعليمية', text: 'منصة تعليمية لحظية متعددة اللاعبين بوضع لعب للاستحواذ على المناطق ونقاط مباشرة. حالة اللعبة والعملة داخل التطبيق تُدار عبر SQL RPCs آمنة.' },
-      { name: 'حجوزاتي (MyReservation)', alt: 'عمل فني تجريدي لتقويم حجوزات', text: 'نظام حجوزات على الويب يعالج الحجوزات المتزامنة مع توفر لحظي، ومصادقة المستخدمين، وصلاحيات حسب الدور.', stack: ['تطوير ويب متكامل', 'مصادقة', 'صلاحيات حسب الدور'] },
-      { name: 'السيرفر المنزلي والمختبر', alt: 'عمل فني تجريدي لخوادم تربطها خطوط مضيئة', text: 'مختبر ذاتي الاستضافة على Ubuntu Server وProxmox مع خدمات Docker وتخزين RAID ومراقبة UPS عبر NUT.' }
+      { name: 'نبراس', alt: 'عمل فني تجريدي لمنصة نبراس التعليمية', text: 'منصة تعليمية لحظية متعددة اللاعبين بوضع لعب للاستحواذ على المناطق ونظام نقاط مباشر، وتُدار حالة اللعبة والعملة داخل التطبيق عبر SQL RPCs آمنة.' },
+      { name: 'حجوزاتي (MyReservation)', alt: 'عمل فني تجريدي لتقويم حجوزات', text: 'نظام حجوزات على الويب يعالج الحجوزات المتزامنة مع عرض التوافر لحظياً، ومصادقة المستخدمين، وصلاحيات حسب الدور.', stack: ['تطوير ويب متكامل', 'مصادقة', 'صلاحيات حسب الدور'] },
+      { name: 'الخادم المنزلي والمختبر', alt: 'عمل فني تجريدي لخوادم تربطها خطوط مضيئة', text: 'مختبر ذاتي الاستضافة على Ubuntu Server وProxmox مع خدمات Docker وتخزين RAID ومراقبة UPS عبر NUT.' }
     ]
   },
   skills: {

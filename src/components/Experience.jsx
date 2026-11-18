@@ -27,15 +27,19 @@ export default function Experience() {
     };
   }, []);
 
-  // The same five colours as the hero cables: each bullet's dot says which track it belongs to.
+  // The same colours as the hero's room: each bullet's dot says which track it belongs to.
+  // The legend lists only the tracks the jobs use (the home lab, for one, is not a job).
+  const used = new Set(t.experience.jobs.flatMap(job => job.bullets.map(([track]) => track)));
   const legend = (
     <ul className="legend" aria-label={t.experience.legend}>
-      {t.tracks.map((track, i) => (
-        <li key={i} className={`c${i}`}>
-          <span className="dot" aria-hidden="true" />
-          {track.name}
-        </li>
-      ))}
+      {t.tracks.map((track, i) =>
+        used.has(i) ? (
+          <li key={i} className={`c${i}`}>
+            <span className="dot" aria-hidden="true" />
+            {track.name}
+          </li>
+        ) : null
+      )}
     </ul>
   );
 

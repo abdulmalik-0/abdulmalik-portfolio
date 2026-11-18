@@ -9,8 +9,8 @@ import StarBorder from './reactbits/StarBorder.jsx';
 import RoomDetail from './RoomDetail.jsx';
 
 // Which side of its dot each hotspot's label sits on (screen sides, the same in both languages),
-// chosen so the five labels do not cover each other over the room.
-const LABEL_SIDE = ['top', 'top', 'left', 'top', 'top'];
+// chosen so the labels do not cover each other over the room.
+const LABEL_SIDE = ['top', 'top', 'left', 'top', 'top', 'right'];
 
 const WIDE = '(min-width: 1000px)';
 
